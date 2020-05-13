@@ -17,10 +17,54 @@
     </head>
 
     <body>
+        <header>	<!-- container for page navbar -->
+            <nav class="navbar navbar-light" style="background-color: #a6f1a6;">
+                <div class="container">
+                    <h1>List of articles</h1>
+                </div>
+            </nav>
+        </header>
         <div class="container">
-            <h1>List of articles</h1>
-            <h2>Articles waiting to be approved</h2>
+
+            
+            
+            <h5>To be approved</h5>
+
+            <table class="table table-striped table-bordered mt-3">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Link</th>
+                    <th>Date</th>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <th>Quack</th>
+                    <th><a href="google.com">Google</a></th>
+                    <th>Date</th>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <th>Quack 2</th>
+                    <th><a href="google.com">Google</a></th>
+                    <th>Date</th>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <th>Quack 3</th>
+                    <th><a href="google.com">Google</a></th>
+                    <th>Date</th>
+                </tr>
+            </table>
+            
         </div>
-        
+
+
+        <!-- Footer -->
+        <footer class="footer fixed-bottom" style="background-color: #b8f4b8;"> <!-- container for page footer -->
+			<div class="container" style="padding:8px 6px;">
+				<a href="about.html" id="float-right">About this website</a>
+			</div>
+		</footer>
     </body>
 </html>
