@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- TODO -->
 <html>
     <head>
         <meta charset="UTF-8">
@@ -22,29 +22,48 @@
 				text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0,0,0,0.15);
 			}
 		</style>
-        <title>SEER</title>
+        <title>Submit article</title>
     </head>
 
     <body>
         <header>	<!-- container for page navbar -->
             <nav class="navbar navbar-light" style="background-color: #a6f1a6;">
                 <div class="container">
-                    <h1>Welcome to SEER</h1>
+                    <h1>Submit article</h1>
                 </div>
             </nav>
         </header>
 
         <div class="container mt-2">
-            <p class="mt-3">Please click on one of the following:</p>
-            <br>
-            <a href="approve_article.php">Approve articles</a>
-            <br>
-            <a href="submit_record.html">Submit articles</a>
+            <div class="form-group">
+                <form id="submit-article">
+                    Name: <input type="text" id="name" required /><br>
+                    <input type="submit">
+                </form>
+            </div>
         </div>
+        <script>
+            $(document).ready(function() {
+                $('submit-article').on('submit', function(e) {
+                    // Stop the form from submitting itself
+                    e.preventDefault();
+                    var name = $('name').val();
+                    $.ajax({
+                        type: "POST",
+                        url: 'submitting.php',
+                        data: {name: name},
+                        success: function(data) {
+                            alert(data);
+                        }
+                    });
+                });
+            });
+        </script>
+
         <!-- Footer -->
         <footer class="footer fixed-bottom" style="background-color: #b8f4b8;"> <!-- container for page footer -->
 			<div class="container" style="padding:8px 6px;">
-				<a href="about.html" id="float-right">About this website</a>
+				<a href="index.php" id="float-left">Return to Home Page</a>
 			</div>
 		</footer>
     </body>
