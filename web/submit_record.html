@@ -40,7 +40,7 @@
                     Name: <input type="text" id="name" required /><br>
                     <input type="submit" class="btn btn-primary mt-2">
                     <!-- Changing span-->
-                    Check: <p style='color:green;' id="check-submit"></p>
+                    <span id="check-submit"></span>
                 </form>
             </div>  
             <br>
@@ -55,7 +55,11 @@
                 xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         document.getElementById("check-submit").innerHTML =
-                        "Success";
+                        "<p style='color:green;'>Successful</p>";
+                    }
+                    else {
+                        document.getElementById("check-submit").innerHTML =
+                        "<p style='color:red;'>Unsuccessful</p>";
                     }
                 };
                 xhttp.open("POST", "submitting.php", true);
