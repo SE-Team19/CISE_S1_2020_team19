@@ -38,7 +38,7 @@
             <div class="form-group">
                 <form id="submit-article">
                     Name: <input type="text" id="name" required /><br>
-                    <input type="submit" onclick="submit()" class="btn btn-primary mt-2">
+                    <input type="submit" class="btn btn-primary mt-2">
                     <!-- Changing span-->
                     Check: <p style='color:green;' id="check-submit"></p>
                 </form>
@@ -61,6 +61,9 @@
                 xhttp.open("POST", "submitting.php", true);
                 xhttp.send();
             }
+
+            var form = document.getElementById("submit-article");
+            form.addEventListener('submit', submit);
         </script>
 
         <!-- Footer -->
