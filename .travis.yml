@@ -3,12 +3,6 @@ language: php
 
 dist: trusty
 
-# Versions of PHP you want your project run with.
-php:
-  - 5.5
-  - 5.6
-  - 7.0
-
 before_script:
  - composer install --no-interaction
 
