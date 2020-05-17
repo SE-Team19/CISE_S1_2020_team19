@@ -2,7 +2,7 @@
 
 if (isset($_POST['name'])) {
     $name = $_POST['name'];
-    echo "test";
+    echo $name;
     //echo "<p style='color:green;'>Successful</p>" + $name;
 }
 
