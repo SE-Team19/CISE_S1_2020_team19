@@ -64,14 +64,14 @@
                 xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         document.getElementById("check-submit").innerHTML =
-                        this.responseText;
+                        xhttp.responseText;
                     }
                     /*else {
                         document.getElementById("check-submit").innerHTML =
                         "<p style='color:red;'>Unsuccessful</p>";
                     }*/
                 };
-                xhttp.send("name=" + name);
+                xhttp.send("name=" + name + "&link=" + link);
             }
 
             var form = document.getElementById("submit-article");
