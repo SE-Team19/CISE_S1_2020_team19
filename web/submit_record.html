@@ -48,7 +48,9 @@
         </div>
         <script>
             function submit(e) {
-                var xhttp = new XMLHttpRequest();
+                var xhttp = new XMLHttpRequest(); 
+                // Get the name
+                var name = document.getElementById("name").innerHTML;
                 // Prevent form from submitting itself
                 e.preventDefault();
                 
@@ -63,7 +65,8 @@
                     }*/
                 };
                 xhttp.open("POST", "submitting.php", true);
-                xhttp.send();
+                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xhttp.send("name=" + name);
             }
 
             var form = document.getElementById("submit-article");
