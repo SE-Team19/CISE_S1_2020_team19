@@ -15,8 +15,8 @@ if (isset($_POST['name']) && isset($_POST['link']) && isset($_POST['date'])) {
     // Connect using pgsql
     $conn = pg_connect(getenv("DATABASE_URL"));
     
-    if (!$conn) {
-        echo "<p style='color:red;'>Connection to database failed. Error number: $conn->preg_last_error</p>";
+    if ($conn == false) {
+        echo "<p style='color:red;'>Connection to database failed. Error number: $conn->pg_last_error</p>";
         die();
     }
     echo "<p style='color:green;'>Successful</p>";
