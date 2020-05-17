@@ -39,11 +39,15 @@
             <form id="submit-article">
                 <div class="form-group">
                     <label>Name:</label> 
-                    <input type="text" id="name" required /><br>
+                    <input type="text" class="form-control" id="name" required /><br>
                 </div>
                 <div class="form-group">
                     <label>Link:</label>
-                    <input type="text" id="link" required /><br>
+                    <input type="text" class="form-control" id="link" required /><br>
+                </div>
+                <div class="form-group">
+                    <label>Date:</label>
+                    <input type="date" class="form-control" id="date" required /><br>
                 </div>
                     
                 <input type="submit" class="btn btn-primary mt-2">
@@ -61,6 +65,8 @@
                 var name = document.getElementById("name").value;
                 // Get the link
                 var link = document.getElementById("link").value;
+                // Get the link
+                var date = document.getElementById("date").value;
                 // Prevent form from submitting itself
                 e.preventDefault();
                 
@@ -70,10 +76,9 @@
                     if (this.readyState == 4 && this.status == 200) {
                         document.getElementById("check-submit").innerHTML =
                         this.responseText;
-                        alert(this.responseText);
                     }
                 };
-                xhttp.send("name=" + name + "&link=" + link);
+                xhttp.send("name=" + name + "&link=" + link + "&date=" + date);
             }
 
             var form = document.getElementById("submit-article");
