@@ -12,10 +12,10 @@
     $username = "ujebccinfaqukt";
     $password = "5bc5f1199e72b3a45bcd320fad11fcd5464ac989651150d10681d498fa65ff08";
     $port = "5432";
-    /*
+    
     // Create SQLi object
     $mysqli = new mysqli($host, $username, $password, $dbname, $port);
-    
+    /*
     if ($mysqli->connect_error) {
         echo "<p style='color:red;'>Connection to database failed. Error number: $mysqli->connect_errno</p>";
         die("Connection failed");
