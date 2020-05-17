@@ -2,7 +2,7 @@
 
 //if (isset($_POST['name']) && isset($_POST['link']) && isset($_POST['date'])) {
     // Obtain all date
-    echo "<p style='color:green;'>Successful</p>";
+    /*echo "<p style='color:green;'>Successful</p>";
     $name = $_POST['name'];
     $link = $_POST['link'];
     $date = $_POST['date'];
@@ -20,7 +20,7 @@
     if ($mysqli->connect_error) {
         echo "<p style='color:red;'>Connection to database failed. Error number: $mysqli->connect_errno</p>";
         die("Connection failed");
-    }
+    }*/
     echo "<p style='color:green;'>Successful</p>";
 //}
 
