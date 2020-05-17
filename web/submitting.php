@@ -17,7 +17,7 @@ if (isset($_POST['name']) && isset($_POST['link']) && isset($_POST['date'])) {
     
     if ($mysqli->connect_error) {
         echo "<p style='color:red;'>Connection to database failed. Error number: $mysqli->connect_errno</p>";
-        die("Connection failed");
+        die();
     }
     echo "<p style='color:green;'>Successful</p>";
 }
