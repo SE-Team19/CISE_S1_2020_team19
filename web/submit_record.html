@@ -38,6 +38,8 @@
             <div class="form-group">
                 <form id="submit-article">
                     Name: <input type="text" id="name" required /><br>
+                    Link: <input type="text" id="link" required /><br>
+                    
                     <input type="submit" class="btn btn-primary mt-2">
                     <!-- Changing span-->
                     <span id="check-submit"></span>
@@ -51,9 +53,14 @@
                 var xhttp = new XMLHttpRequest(); 
                 // Get the name
                 var name = document.getElementById("name").innerHTML;
+                // Get the link
+                var link = document.getElementById("link").innerHTML;
                 // Prevent form from submitting itself
                 e.preventDefault();
+                alert(name);
                 
+                xhttp.open("POST", "submitting.php", true);
+                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         document.getElementById("check-submit").innerHTML =
@@ -64,9 +71,7 @@
                         "<p style='color:red;'>Unsuccessful</p>";
                     }*/
                 };
-                xhttp.open("POST", "submitting.php", true);
-                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                xhttp.send("name=test" + name);
+                xhttp.send("name=" + name);
             }
 
             var form = document.getElementById("submit-article");
