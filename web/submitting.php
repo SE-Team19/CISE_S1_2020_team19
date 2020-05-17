@@ -15,10 +15,10 @@ if (isset($_POST['name']) && isset($_POST['link']) && isset($_POST['date'])) {
 
     // Create SQLi object
     $mysqli = new mysqli($host, $username, $password, $dbname, $port);
-
+    
     if ($mysqli->connect_error) {
-        echo "<p style='color:red;'>Connection to database failed</p>";
-        die("Connection failed");
+        echo "<p style='color:red;'>Connection to database failed. Error number: $mysqli->connect_errno</p>";
+        //die("Connection failed");
     }
     echo "<p style='color:green;'>Successful</p>";
 }
