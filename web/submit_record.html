@@ -35,14 +35,20 @@
         </header>
 
         <div class="container mt-3">
-            <div class="form-group">
-                <form id="submit-article">
-                    Name: <input type="text" id="name" required /><br>
-                    Link: <input type="text" id="link" required /><br>
+            
+            <form id="submit-article">
+                <div class="form-group">
+                    <label>Name:</label> 
+                    <input type="text" id="name" required /><br>
+                </div>
+                <div class="form-group">
+                    <label>Link:</label>
+                    <input type="text" id="link" required /><br>
+                </div>
                     
-                    <input type="submit" class="btn btn-primary mt-2">
-                    <!-- Changing span-->
-                    <span id="check-submit"></span>
+                <input type="submit" class="btn btn-primary mt-2">
+                <!-- Changing span-->
+                <span id="check-submit"></span>
                 </form>
             </div>  
             <br>
