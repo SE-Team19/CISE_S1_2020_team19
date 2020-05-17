@@ -14,7 +14,7 @@
     $port = "5432";
     
     // Create SQLi object
-    $mysqli = new mysqli($host, $username, $password, $dbname, $port);
+    $mysqli = new mysqli($host, $username, $password, $dbname);
     /*
     if ($mysqli->connect_error) {
         echo "<p style='color:red;'>Connection to database failed. Error number: $mysqli->connect_errno</p>";
