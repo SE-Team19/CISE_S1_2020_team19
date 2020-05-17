@@ -12,11 +12,11 @@ if (isset($_POST['name']) && isset($_POST['link']) && isset($_POST['date'])) {
     $username = "ujebccinfaqukttest";
     $password = "5bc5f1199e72b3a45bcd320fad11fcd5464ac989651150d10681d498fa65ff08";
     
-    // Create SQLi object
-    $mysqli = new mysqli($host, $username, $password, $dbname);
+    // Connect using pgsql
+    $conn = pg_connect(getenv("DATABASE_URL"));
     
-    if ($mysqli->connect_error) {
-        echo "<p style='color:red;'>Connection to database failed. Error number: $mysqli->connect_errno</p>";
+    if (!$conn) {
+        echo "<p style='color:red;'>Connection to database failed. Error number: $conn->preg_last_error</p>";
         die();
     }
     echo "<p style='color:green;'>Successful</p>";
