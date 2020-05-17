@@ -52,9 +52,9 @@
             function submit(e) {
                 var xhttp = new XMLHttpRequest(); 
                 // Get the name
-                var name = document.getElementById("name").innerText;
+                var name = document.getElementById("name").value;
                 // Get the link
-                var link = document.getElementById("link").innerText;
+                var link = document.getElementById("link").value;
                 // Prevent form from submitting itself
                 e.preventDefault();
                 alert(name);
