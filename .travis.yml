@@ -1,7 +1,7 @@
 # Required to run your project under the correct environment.
 language: php
 
-dist: trusty
+Build dist: trusty
 
 before_script:
  - composer install --no-interaction
