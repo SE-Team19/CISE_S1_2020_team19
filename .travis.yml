@@ -1,2 +1,2 @@
 language: php
-script: php about.php
+script: phpunit about.php
