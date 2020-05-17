@@ -1,6 +1,6 @@
 <?php 
 
-if (isset($_POST['name']) && isset($_POST['link']) && isset($_POST['date'])) {
+//if (isset($_POST['name']) && isset($_POST['link']) && isset($_POST['date'])) {
     // Obtain all date
     $name = $_POST['name'];
     $link = $_POST['link'];
@@ -18,9 +18,9 @@ if (isset($_POST['name']) && isset($_POST['link']) && isset($_POST['date'])) {
     
     if ($mysqli->connect_error) {
         echo "<p style='color:red;'>Connection to database failed. Error number: $mysqli->connect_errno</p>";
-        //die("Connection failed");
+        die("Connection failed");
     }
     echo "<p style='color:green;'>Successful</p>";
-}
+//}
 
 ?>
