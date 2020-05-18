@@ -19,7 +19,7 @@ if (isset($_POST['name']) && isset($_POST['link']) && isset($_POST['date'])) {
         echo "<p style='color:red;'>Connection to database failed. Error number: $conn->pg_last_error</p>";
         die();
     }
-    echo "<p style='color:green;'>Successful</p>";
+    //echo "<p style='color:green;'>Successful</p>";
 
     $sql = "CREATE TABLE testing (
             ID INT PRIMARY KEY)";
