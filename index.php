@@ -29,7 +29,7 @@
         <header>	<!-- container for page navbar -->
             <nav class="navbar navbar-light" style="background-color: #a6f1a6;">
                 <div class="container">
-                    <h1>About SEER</h1>
+                    <h1>About SEER Project</h1>
                 </div>
             </nav>
         </header>
