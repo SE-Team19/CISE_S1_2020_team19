@@ -37,6 +37,17 @@
         <div class="container mt-2">
             <p class="mt-3">SEER is designed to provide evidence on software practices.</p>
         </div>
+
+        <?php
+            $connection = pg_connect(getenv("DATABASE_URL"));
+
+            if ($connection = false){
+                echo "<p>Connected to database failed</p>";
+            } else {
+                echo "<p>Connection successful</p>";
+            }
+        ?>
+
         <!-- Footer -->
         <footer class="footer fixed-bottom" style="background-color: #b8f4b8;"> <!-- container for page footer -->
 			<div class="container" style="padding:8px 6px;">
