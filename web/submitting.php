@@ -23,7 +23,10 @@ if (isset($_POST['name']) && isset($_POST['link']) && isset($_POST['date'])) {
 
     $sql = "CREATE TABLE testing (
             ID INT PRIMARY KEY)";
-    pg_query($conn, $sql);
+    if (pg_query($conn, $sql) == false) {
+        echo pg_last_error();
+    }
+
 }
 
 ?>
