@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
         <!-- Stylesheet : THIS DID NOT WORK (see below for correct referencing) -->
-        <!--<script src="css/style.css"></script>-->
+        <script src="css/style.css"></script>
 
         <!--Importing the CSS Stylesheet for design/visuals-->
         <link rel="stylesheet" type="text/css" href="css/style.css">
