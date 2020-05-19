@@ -5,8 +5,11 @@
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-        <!-- Stylesheet -->
-        <script src="css/style.css"></script>
+        <!-- Stylesheet : THIS DID NOT WORK (see below for correct referencing) -->
+        <!--<script src="css/style.css"></script>-->
+
+        <!--Importing the CSS Stylesheet for design/visuals-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
 
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -34,14 +37,25 @@
             </nav>
         </header>
 
-        <div class="container mt-2">
-            <p class="mt-3">Please click on one of the following:</p>
+        <div class="container_account">
+            <h3 class="">Account</h3>
+            <hr>
+            <h5>User Name</h5>
             <br>
-            <a href="user_account.php">My Account</a>
             <br>
-            <a href="submit_record.php">Submit article</a>
+            <p>Articles submitted: * row# where article accepted=true</p>
             <br>
-            <a href="approve_article.php">Approve articles</a>
+            <h5>Article history</h5>
+            <hr>
+            <p>Table: rows of article submissions (with article accepted column)</p>
+            <p>Table: rows of article submissions (with article accepted column)</p>
+            <p>Table: rows of article submissions (with article accepted column)</p>
+            <p>Table: rows of article submissions (with article accepted column)</p>
+            <p>Table: rows of article submissions (with article accepted column)</p>
+            <p>Table: rows of article submissions (with article accepted column)</p>
+            <br>
+            <br>
+            <input class="button" id="account_btn" type="button" value="Home" onclick="window.location.href='index.php'">
         </div>
         <!-- Footer -->
         <footer class="footer fixed-bottom" style="background-color: #b8f4b8;"> <!-- container for page footer -->
