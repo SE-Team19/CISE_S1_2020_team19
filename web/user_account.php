@@ -5,7 +5,7 @@
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-        <!-- Stylesheet : THIS DID NOT WORK (see below for correct referencing) -->
+        <!-- Stylesheet : Does this work? -->
         <script src="css/style.css"></script>
 
         <!--Importing the CSS Stylesheet for design/visuals-->

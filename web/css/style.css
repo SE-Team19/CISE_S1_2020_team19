@@ -2,9 +2,23 @@
 Description: Custom CSS selectors and properties
 */
 
-/* index.html style: */
+/* ALL */
+
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+/* index.html? style: */
 #float-right {
 	float: right;
+}
+
+.container_index {
+	margin: 0 150px;
+	padding: 0 20px;
+	text-align: left;
 }
 
 /* poststatusform.php styles: */
@@ -68,12 +82,6 @@ hr {
 }
 
 /* ALL / submit_record.php */
-
-body {
-	margin: 0;
-	padding: 0;
-	text-align: center;
-}
 
 #container_sr {
 	margin: 10px 0;

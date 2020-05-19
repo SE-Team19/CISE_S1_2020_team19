@@ -5,8 +5,11 @@
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-        <!-- Stylesheet -->
+        <!-- Stylesheet : Does this work? -->
         <script src="css/style.css"></script>
+
+        <!--Importing the CSS Stylesheet for design/visuals-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
 
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -34,7 +37,7 @@
             </nav>
         </header>
 
-        <div class="container mt-2">
+        <div class="container_index">
             <p class="mt-3">Please click on one of the following:</p>
             <br>
             <a href="user_account.php">My Account</a>
