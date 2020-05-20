@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- For moderator use -->
 <html>
     <head>
         <meta charset="UTF-8">
@@ -16,7 +17,7 @@
         <title>Approve article</title>
     </head>
 
-    <body>
+    <body">
         <header>	<!-- container for page navbar -->
             <nav class="navbar navbar-light" style="background-color: #a6f1a6;">
                 <div class="container">
@@ -30,35 +31,41 @@
             
             <h5>To be approved</h5>
 
-            <table class="table table-striped table-bordered mt-3">
-                <tr>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Link</th>
-                    <th>Date</th>
-                </tr>
-                <tr>
-                    <th>1</th>
-                    <th>Quack</th>
-                    <th><a href="google.com">Google</a></th>
-                    <th>Date</th>
-                </tr>
-                <tr>
-                    <th>2</th>
-                    <th>Quack 2</th>
-                    <th><a href="google.com">Google</a></th>
-                    <th>Date</th>
-                </tr>
-                <tr>
-                    <th>3</th>
-                    <th>Quack 3</th>
-                    <th><a href="google.com">Google</a></th>
-                    <th>Date</th>
-                </tr>
-            </table>
+            <?php
+            // Connect using pgsql
+            $conn = pg_connect(getenv("DATABASE_URL"));
+    
+            if ($conn == false) {
+                echo "<p style='color:red;'>Connection to database failed. Error number: $conn->pg_last_error</p>";
+                die();
+            }
+            // Select the first row in the table
+            $sql = "SELECT * FROM testing
+                    ORDER BY ID DESC
+                    LIMIT 1;";
+            $result = pg_query($conn, $sql);
+
+            $row = pg_fetch_assoc($result);
+            //$name = $row['Name'];
+            //$link = $row['Link'];
+            //$date = $row['Date'];
+
+            //echo "<p>Name: $name <br>
+            //        Link: $link<br>
+            //        Date: $date<br></p>";
+            pg_close($conn);
+            ?>
             
+            <embed src="test.pdf" width="1920px" height="1080px">
+
         </div>
 
+        <script>
+            function moveToAnalyst() {
+                var xhttp = new XMLHttpRequest(); 
+                
+            }
+        </script>
 
         <!-- Footer -->
         <footer class="footer fixed-bottom" style="background-color: #b8f4b8;"> <!-- container for page footer -->
