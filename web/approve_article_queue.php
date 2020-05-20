@@ -56,7 +56,7 @@
             pg_close($conn);
             ?>
             
-            <embed src="test.pdf" width="1920px" height="1080px">
+            <embed src="test.pdf" width="720px" height="480px">
 
         </div>
 
