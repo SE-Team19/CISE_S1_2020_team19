@@ -37,7 +37,7 @@
         <div class="container mt-2">
             <p class="mt-3">Please click on one of the following:</p>
             <br>
-            <a href="approve_article.php">Approve articles</a>
+            <a href="approve_article_queue.php">Approve articles</a>
             <br>
             <a href="submit_record.html">Submit articles</a>
         </div>
