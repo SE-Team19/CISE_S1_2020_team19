@@ -40,6 +40,7 @@
                 (<span class="year"></span>).
                 <span class="title"></span>
                 <span class="journal"></span>
+                <br>
             </div>
 
             <div id="bibtex_display"></div>
