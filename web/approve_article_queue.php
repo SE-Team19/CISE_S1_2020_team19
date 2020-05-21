@@ -31,6 +31,7 @@
         <div class="container">
 
             <h5>To be approved</h5>
+            <br>
 
             <bibtex src="test.bib"></bibtex>
             <div id="bibtex_display"></div>
@@ -44,7 +45,7 @@
               Edition: ninth Dover printing, tenth GPO printing <br>
             </p>-->
 
-            <button id="approve" value="Approve" class="btn btn-primary mt-2" onclick="moveToAnalyst()"></button>
+            <button id="approve" class="btn btn-primary mt-2" onclick="moveToAnalyst()">Approve</button>
 
             <?php
             // Connect using pgsql
@@ -59,20 +60,12 @@
                     ORDER BY ID DESC
                     LIMIT 1;";
             $result = pg_query($conn, $sql);
-
-            $row = pg_fetch_assoc($result);
-            //$name = $row['Name'];
-            //$link = $row['Link'];
-            //$date = $row['Date'];
-
-            //echo "<p>Name: $name <br>
-            //        Link: $link<br>
-            //        Date: $date<br></p>";
             pg_close($conn);
             ?>
 
         </div>
 
+        <!-- Move record to analyst queue -->
         <script>
             function moveToAnalyst() {
                 var xhttp = new XMLHttpRequest(); 
