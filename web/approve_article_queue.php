@@ -34,8 +34,12 @@
             <br>
 
             <bibtex src="test.bib"></bibtex>
+            <!-- Customize bibtex template -->
             <div class="bibtex_template">
+                <span class="author"></span>
+                <span class="year"></span>
                 <span class="title"></span>
+                <span class="journal"></span>
             </div>
 
             <div id="bibtex_display"></div>
