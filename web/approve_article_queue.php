@@ -30,19 +30,10 @@
         </header>
         <div class="container">
 
-            
-            
             <h5>To be approved</h5>
 
             <bibtex src="test.bib"></bibtex>
-            <div id="bibtext_display"></div>
-
-            <textarea id="bibtex_input" style="display:none;">
-                @book{book1,
-                author = "Donald Knuth",
-                title = "Concrete Mathematics"
-                }
-</textarea>
+            <div id="bibtex_display"></div>
             <!--<p>
                 Title: Handbook of Mathematical Functions with
               Formulas, Graphs, and Mathematical Tables <br>
@@ -53,7 +44,7 @@
               Edition: ninth Dover printing, tenth GPO printing <br>
             </p>-->
 
-            <button id="approve" class="btn btn-primary mt-2" onclick
+            <button id="approve" value="Approve" class="btn btn-primary mt-2" onclick
 
             <?php
             // Connect using pgsql
