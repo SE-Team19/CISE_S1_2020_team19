@@ -32,6 +32,15 @@
 
             <h5>To be approved</h5>
             <br>
+            <div class="bibtex_structure">
+                <div class="group year" extra="ASC number">
+  	                <a href="#top" style="display: inline"><em>(Top of the page)</em></a>
+  	                    <div style="padding-bottom:10px;"></div>
+  	                <div class="sort journal" extra="DESC string">
+      	        <div class="templates"></div>
+                </div>
+                </div>
+            </div>
 
             <bibtex src="test.bib"></bibtex>
             <div id="bibtex_display"></div>
