@@ -44,7 +44,7 @@
               Edition: ninth Dover printing, tenth GPO printing <br>
             </p>-->
 
-            <button id="approve" value="Approve" class="btn btn-primary mt-2" onclick
+            <button id="approve" value="Approve" class="btn btn-primary mt-2" onclick="moveToAnalyst()"></button>
 
             <?php
             // Connect using pgsql
