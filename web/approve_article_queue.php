@@ -37,7 +37,13 @@
             <bibtex src="test.bib"></bibtex>
             <div id="bibtext_display"></div>
 
-            <p>
+            <textarea id="bibtex_input" style="display:none;">
+                @book{book1,
+                author = "Donald Knuth",
+                title = "Concrete Mathematics"
+                }
+</textarea>
+            <!--<p>
                 Title: Handbook of Mathematical Functions with
               Formulas, Graphs, and Mathematical Tables <br>
               Author: Milton Abramowitz and Irene A. Stegun <br>
@@ -45,7 +51,7 @@
               Year: 1964 <br>
               Address: New York City <br>
               Edition: ninth Dover printing, tenth GPO printing <br>
-            </p>
+            </p>-->
 
             <button id="approve" class="btn btn-primary mt-2" onclick
 
