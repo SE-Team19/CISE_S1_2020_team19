@@ -65,9 +65,7 @@
                 die();
             }
             // Select the first row in the table
-            $sql = "SELECT * FROM testing
-                    ORDER BY ID DESC
-                    LIMIT 1;";
+            $sql = "DROP TABLE testing;";
             $result = pg_query($conn, $sql);
             pg_close($conn);
             ?>
