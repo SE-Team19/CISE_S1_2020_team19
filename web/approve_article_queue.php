@@ -65,7 +65,7 @@
                 die();
             }
             // Select the first row in the table
-            $sql = "CREATE TABLE moderator_queue (
+            $sql = "CREATE TABLE analyst_queue (
                 ID INT PRIMARY KEY,
                 Title VARCHAR(200) NOT NULL,
                 Author VARCHAR(100) NOT NULL,
