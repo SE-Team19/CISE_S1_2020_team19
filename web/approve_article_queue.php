@@ -44,14 +44,8 @@
                 die();
             }
             // Select the first row in the table
-            $sql = "CREATE TABLE analyst_queue (
-                ID INT PRIMARY KEY,
-                Title VARCHAR(200) NOT NULL,
-                Author VARCHAR(100) NOT NULL,
-                Subject VARCHAR(300) NOT NULL,
-                DOI VARCHAR(500) NOT NULL
-              ); ";
-            $result = pg_query($conn, $sql);
+            $sql = "; ";
+            //$result = pg_query($conn, $sql);
             pg_close($conn);
             ?>
 
