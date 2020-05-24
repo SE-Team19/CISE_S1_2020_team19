@@ -33,27 +33,6 @@
             <h5>To be approved</h5>
             <br>
 
-            <bibtex src="test.bib"></bibtex>
-            <!-- Customize bibtex template -->
-            <div class="bibtex_template">
-                <span class="author"></span>
-                (<span class="year"></span>).
-                <span class="title"></span>
-                <span class="journal"></span>
-                <br>
-            </div>
-
-            <div id="bibtex_display"></div>
-            <!--<p>
-                Title: Handbook of Mathematical Functions with
-              Formulas, Graphs, and Mathematical Tables <br>
-              Author: Milton Abramowitz and Irene A. Stegun <br>
-              Publisher: Dover <br>
-              Year: 1964 <br>
-              Address: New York City <br>
-              Edition: ninth Dover printing, tenth GPO printing <br>
-            </p>-->
-
             <button id="approve" class="btn btn-primary mt-2" onclick="moveToAnalyst()">Approve</button>
 
             <?php
