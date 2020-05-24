@@ -25,26 +25,40 @@
 				text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0,0,0,0.15);
 			}
 		</style>
-        <title>About SEER</title>
+        <title>SEER</title>
     </head>
 
     <body>
-        <header>	<!-- container for page navbar -->
-            <nav class="navbar navbar-light" style="background-color: #a6f1a6;">
-                <div class="container">
-                    <h1>About SEER</h1>
-                </div>
+        <header>	<!-- container for navbar -->
+            <nav class="navbar">
+                <ul>
+                    <li><a href="submitform.php">Submit article</a></li>
+                    <li><a href="analyst.php">Journal Queue</a></li>
+                    <li><a href="user_account.php">My Account</a></li>
+                </ul>
             </nav>
         </header>
 
-        <div class="container mt-2">
-            <p class="mt-3">SEER is designed to provide evidence on software practices.</p>
+        <div class="seer_title_container">
+            <h1 class="seer_home" onclick="window.location.href='searchform.php'">SEER</h1>
         </div>
-        <!-- Footer -->
-        <footer class="footer fixed-bottom" style="background-color: #b8f4b8;"> <!-- container for page footer -->
-			<div class="container" style="padding:8px 6px;">
-				<a href="index.php" id="float-left">Return to Home Page</a>
-			</div>
-		</footer>
+
+        <div class="container">
+            <h3 class="hr_title"> Search</h3>
+            <hr>
+            <br>
+            <?php
+                /*
+                    code for saving article goes here 
+
+                */
+            ?>
+        </div>
     </body>
+    <!-- Footer -->
+    <div class="footer_container">
+        <footer>
+            <a href="about.html">About this website</a>
+        </footer>
+    </div>
 </html>
