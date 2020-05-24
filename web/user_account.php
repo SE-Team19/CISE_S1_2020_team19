@@ -29,39 +29,81 @@
     </head>
 
     <body>
-        <header>	<!-- container for page navbar -->
-            <nav class="navbar navbar-light" style="background-color: #a6f1a6;">
-                <div class="container">
-                    <h1>Welcome to SEER</h1>
-                </div>
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="submitform.php">Submit Article</a></li>
+                    <li><a href="moderator.php">Moderator Queue</a></li>
+                    <li><a href="analyst.php">Analyst Queue</a></li>
+                    <li><a href="admin.php">Admin</a></li>
+                    <li><a href="user_account.php">My Account</a></li>
+                </ul>
             </nav>
         </header>
 
-        <div class="container_account">
-            <h3 class="">Account</h3>
+        <div class="seer_title_container">
+            <h1 class="seer_home" onclick="window.location.href='searchform.php'">SEER</h1>
+        </div>
+
+        <div class="container">
+            <h3 class="hr_title"> My Account</h3>
             <hr>
-            <h5>User Name</h5>
             <br>
-            <br>
-            <p>Articles submitted: * row# where article accepted=true</p>
-            <br>
-            <h5>Article history</h5>
-            <hr>
-            <p>Table: rows of article submissions (with article accepted column)</p>
-            <p>Table: rows of article submissions (with article accepted column)</p>
-            <p>Table: rows of article submissions (with article accepted column)</p>
-            <p>Table: rows of article submissions (with article accepted column)</p>
-            <p>Table: rows of article submissions (with article accepted column)</p>
-            <p>Table: rows of article submissions (with article accepted column)</p>
-            <br>
-            <br>
-            <input class="button" id="account_btn" type="button" value="Home" onclick="window.location.href='index.php'">
+
+            <div class="container_account">
+                <h3 class="">User Name: User Role</h3>
+                <hr>
+                <br>
+                <label id="articles_submitted_label">Articles submitted:</label>
+                <label id="articles_submitted">* row# where article accepted=true</label>
+                    <br>
+                    <br>
+                <h5>Article history</h5>
+                    <br>
+                <table>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th> 
+                        <th>Year</th>
+                        <th>DOI</th>
+                        <th>Accepted</th>
+                    </tr>
+                    <tr>
+                        <td>Example</td>
+                        <td>Example</td> 
+                        <td>2020</td>
+                        <td>Example</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td>Example</td>
+                        <td>Example</td>
+                        <td>2020</td>
+                        <td>Example</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <td>Example</td>
+                        <td>Example</td> 
+                        <td>2020</td>
+                        <td>Example</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td>Example</td>
+                        <td>Example</td>
+                        <td>2020</td>
+                        <td>Example</td>
+                        <td>False</td>
+                    </tr>
+                </table>
+            </div>
         </div>
         <!-- Footer -->
-        <footer class="footer fixed-bottom" style="background-color: #b8f4b8;"> <!-- container for page footer -->
-			<div class="container" style="padding:8px 6px;">
-				<a href="about.html" id="float-right">About this website</a>
-			</div>
-		</footer>
-    </body>
+        <div class="footer_container">
+                <footer>
+                    <a href="about.html">About this website</a>
+                </footer>
+            </div>
+    </body>  
 </html>
