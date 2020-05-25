@@ -52,9 +52,9 @@
                 $sql = "SELECT * FROM articles";
                 $result = pg_query($conn, $result);
                 while ($row = pg_fetch_assoc($result)) {
-                    echo $row['title'];
-                    echo $row['subject'];
-                    echo $row['author'];
+                    echo $row['title'] . "<br>";
+                    echo $row['subject'] . "<br>";
+                    echo $row['author'] . "<br>";
                 }
                 pg_close($conn);
                 //echo "Sorry, this page is currently under maintenance.";
