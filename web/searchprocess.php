@@ -62,12 +62,14 @@
                 $conn = pg_connect(getenv("DATABASE_URL"));
                 $sql = "SELECT * FROM articles";
                 $result = pg_query($conn, $result);
-                while ($row = pg_fetch_assoc($result)) {
+                $row = pg_fetch_assoc($result);
+                while ($row) {
                     echo "<tr>";
                     echo "<td>".$row['title']."</td>";
                     echo "<td>".$row['subject']."</td>";
                     echo "<td>".$row['author']."</td>";
                     echo "</tr>";
+                    $row = pg_fetch_assoc($result);
                 }
                 pg_close($conn);
                 //echo "Sorry, this page is currently under maintenance.";
