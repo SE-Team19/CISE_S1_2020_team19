@@ -47,7 +47,7 @@
 
         <div class="container" id="searchform_container">
             <!-- add action to form: run searchprocess.php -->
-            <form>
+            <form action="searchprocess.php" method="POST">
                 <!-- description block -->
                 <div id="description_container">
                     <div id="description_label_container">
