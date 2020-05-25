@@ -61,7 +61,7 @@
             <?php
                 $conn = pg_connect(getenv("DATABASE_URL"));
                 $sql = "SELECT * FROM articles";
-                $result = pg_query($conn, $result);
+                $result = pg_query($sql);
                 $row = pg_fetch_assoc($result);
                 while ($row) {
                     echo "<tr>";
