@@ -48,10 +48,19 @@
             <hr>
             <br>
             <?php
-                echo "Sorry, this page is currently under maintenance.";
-                echo '<br>';
-                echo '<br>';
-                echo '<button><a href="search.php">Return to Search</a></button>';
+                $conn = pg_connect(getenv("DATABASE_URL"));
+                $sql = "SELECT * FROM articles";
+                $result = pg_query($conn, $result);
+                while ($row = pg_fetch_assoc($result)) {
+                    echo $row['title'];
+                    echo $row['subject'];
+                    echo $row['author'];
+                }
+                pg_close($conn);
+                //echo "Sorry, this page is currently under maintenance.";
+                //echo '<br>';
+                //echo '<br>';
+                //echo '<button><a href="search.php">Return to Search</a></button>';
             ?>
         </div>
     </body>
