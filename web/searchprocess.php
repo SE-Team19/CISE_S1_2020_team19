@@ -47,14 +47,27 @@
             <h3 class="hr_title"> Search Results</h3>
             <hr>
             <br>
+            <table class="table-striped">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Subject</th>
+                        <th>Author</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                
             <?php
                 $conn = pg_connect(getenv("DATABASE_URL"));
                 $sql = "SELECT * FROM articles";
                 $result = pg_query($conn, $result);
                 while ($row = pg_fetch_assoc($result)) {
-                    echo $row['title'] . "<br>";
-                    echo $row['subject'] . "<br>";
-                    echo $row['author'] . "<br>";
+                    echo "<tr>";
+                    echo "<td>".$row['title']."</td>";
+                    echo "<td>".$row['subject']."</td>";
+                    echo "<td>".$row['author']."</td>";
+                    echo "</tr>";
                 }
                 pg_close($conn);
                 //echo "Sorry, this page is currently under maintenance.";
@@ -62,6 +75,9 @@
                 //echo '<br>';
                 //echo '<button><a href="search.php">Return to Search</a></button>';
             ?>
+
+                </tbody>
+            </table>
         </div>
     </body>
     <!-- Footer -->
