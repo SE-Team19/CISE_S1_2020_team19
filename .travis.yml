@@ -1,4 +1,3 @@
 language: php
 php:
   - '7.4'
-script: phpunit --configuration phpunit_$DB.xml --coverage-text
