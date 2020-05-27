@@ -59,8 +59,10 @@
 
                 
             <?php
+                $subject = $_POST['subject'];
                 $conn = pg_connect(getenv("DATABASE_URL"));
-                $sql = "SELECT * FROM articles";
+                $sql = "SELECT * FROM articles
+                        WHERE subject LIKE '$subject%'";
                 $result = pg_query($sql);
                 $row = pg_fetch_assoc($result);
                 while ($row) {
