@@ -1,9 +1,9 @@
-function sortTable(n) {
+function sortTable(id ,n) {
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
     table = document.getElementById("articleTable");
     switching = true;
-    // Set the sorting direction to ascending:
-    dir = "asc";
+    // Set the sorting direction to descending:
+    dir = "desc";
     /* Make a loop that will continue until
     no switching has been done: */
     while (switching) {
@@ -25,12 +25,16 @@ function sortTable(n) {
           if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
             // If so, mark as a switch and break the loop:
             shouldSwitch = true;
+            // Change the arrow
+            var onclickSort = "";
+            id.innerHTML = "<i class='arrow up' onclick='sortTable("+n+","+id+")' id='sort_Title'></i>"
             break;
           }
         } else if (dir == "desc") {
           if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
             // If so, mark as a switch and break the loop:
             shouldSwitch = true;
+            id.innerHTML = "<i class='arrow down' onclick='sortTable("+n+","+id+")' id='sort_Title'></i>"
             break;
           }
         }
