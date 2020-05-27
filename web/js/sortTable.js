@@ -2,8 +2,8 @@ function sortTable(id ,n) {
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
     table = document.getElementById("articleTable");
     switching = true;
-    // Set the sorting direction to descending:
-    dir = "desc";
+    // Get the arrow direction:
+    dir = document.getElementById(id).className;
     /* Make a loop that will continue until
     no switching has been done: */
     while (switching) {
@@ -21,37 +21,37 @@ function sortTable(id ,n) {
         y = rows[i + 1].getElementsByTagName("TD")[n];
         /* Check if the two rows should switch place,
         based on the direction, asc or desc: */
-        if (dir == "asc") {
+        if (dir == "arrow up") {
           if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
             // If so, mark as a switch and break the loop:
             shouldSwitch = true;
             // Change the arrow
-            var header = document.getElementById(id).className = "arrow up";
+            document.getElementById(id).className = "arrow down";
             break;
           }
-        } else if (dir == "desc") {
+        } else if (dir == "arrow down") {
           if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
             // If so, mark as a switch and break the loop:
             shouldSwitch = true;
-            var header = document.getElementById(id).className = "arrow down";
+            document.getElementById(id).className = "arrow up";
             break;
           }
         }
       }
-      if (shouldSwitch) {
-        /* If a switch has been marked, make the switch
-        and mark that a switch has been done: */
+      /*if (shouldSwitch) {
+         If a switch has been marked, make the switch
+        and mark that a switch has been done: 
         rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
         switching = true;
         // Each time a switch is done, increase this count by 1:
         switchcount ++;
       } else {
-        /* If no switching has been done AND the direction is "asc",
-        set the direction to "desc" and run the while loop again. */
+         If no switching has been done AND the direction is "asc",
+        set the direction to "desc" and run the while loop again. 
         if (switchcount == 0 && dir == "desc") {
           dir = "asc";
           switching = true;
-        }
-      }
+        } 
+      }*/
     }
   }
