@@ -53,6 +53,7 @@
                         <th>Title</th>
                         <th>Subject</th>
                         <th>Author</th>
+                        <th>Description</th>
                         <th>Date</th>
                     </tr>
                 </thead>
@@ -78,7 +79,6 @@
                 $sql = "SELECT * FROM articles
                         WHERE subject ILIKE '$subject%'" . 
                         $date_sql .";";
-                echo $sql; // testing
                 $result = pg_query($sql);
                 $row = pg_fetch_assoc($result);
                 while ($row) {
@@ -86,6 +86,7 @@
                     echo "<td>".$row['title']."</td>";
                     echo "<td>".$row['subject']."</td>";
                     echo "<td>".$row['author']."</td>";
+                    echo "<td>".$row['description']."</td>";
                     echo "<td>".$row['date']."</td>";
                     echo "</tr>";
                     $row = pg_fetch_assoc($result);
