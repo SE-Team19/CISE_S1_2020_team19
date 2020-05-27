@@ -76,7 +76,7 @@
                 // Use tenary operator to check if user specified date
                 $sql = "SELECT * FROM articles
                         WHERE subject ILIKE '$subject%'" . 
-                        $date_from . $date_sql .";";
+                        $date_sql .";";
                 $result = pg_query($sql);
                 $row = pg_fetch_assoc($result);
                 while ($row) {
