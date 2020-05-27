@@ -322,6 +322,25 @@ footer {
 				margin: 0;
 				padding: 0;
 			}
+/* +++++++++++++searchprocess.php++++++++++++++++ */
+.arrow {
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	cursor: pointer;
+  }
+  
+  .up {
+	transform: rotate(-135deg);
+	-webkit-transform: rotate(-135deg);
+  }
+  
+  .down {
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+  }
+
 /* +++++++++++++++++++++++++++++ */
 #date_range_container {
 	margin: 0;

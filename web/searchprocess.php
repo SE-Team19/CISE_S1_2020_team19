@@ -19,6 +19,9 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+        <!-- Sort Table JS -->
+        <script src="js/sortTable.js"></script>
         <style> /* overrides Bootstrap CSS style made in multiple locations */
 			h1 {
 				color: #333333;
@@ -47,10 +50,10 @@
             <h3 class="hr_title"> Search Results</h3>
             <hr>
             <br>
-            <table class="table-striped">
+            <table class="table-striped" id="articleTable">
                 <thead>
                     <tr>
-                        <th>Title</th>
+                        <th>Title <i class="arrow up" onclick="sortTable(0)"></i></th>
                         <th>Subject</th>
                         <th>Author</th>
                         <th>Description</th>
