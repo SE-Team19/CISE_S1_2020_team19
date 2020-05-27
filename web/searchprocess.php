@@ -60,13 +60,23 @@
                 
             <?php
                 $subject = $_POST['subject']; // Subject
+                $today = date('Y-m-d');
                 $date_from = $_POST['date_from'];
                 $date_to = $_POST['date_to'];
+                $date_sql = "";
+                if (isset($date_from) && isset($date_to)) { // Both dates are set
+                    $date_sql = "AND date BETWEEN '$date_from' AND '$date_to'";
+                } else if (isset($date_from)) { // Only date from is set
+                    $date_sql = "AND date BETWEEN '$date_from' AND '$today'";
+                } else if (isset($date_to)) { // Only date_to is set
+                    $date_sql = "AND date BETWEEN '1990-01-01' AND '$date_to'";
+                }
+
                 $conn = pg_connect(getenv("DATABASE_URL"));
-                // User LOWER to make it case insensitive
+                // Use tenary operator to check if user specified date
                 $sql = "SELECT * FROM articles
-                        WHERE subject ILIKE '$subject%' AND
-                        date BETWEEN '$date_from' AND '$date_to';";
+                        WHERE subject ILIKE '$subject%'" . 
+                        $date_from . $date_sql .";";
                 $result = pg_query($sql);
                 $row = pg_fetch_assoc($result);
                 while ($row) {
