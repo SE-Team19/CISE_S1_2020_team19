@@ -74,6 +74,7 @@
                     echo "<td>".$row['title']."</td>";
                     echo "<td>".$row['subject']."</td>";
                     echo "<td>".$row['author']."</td>";
+                    echo "<td>".$row['date']."</td>";
                     echo "</tr>";
                     $row = pg_fetch_assoc($result);
                 }
