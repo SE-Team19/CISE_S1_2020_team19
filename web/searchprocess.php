@@ -53,11 +53,11 @@
             <table class="table-striped" id="articleTable">
                 <thead>
                     <tr>
-                        <th>Title <i class="arrow down" onclick="sortTable(this,0)" id="sort_Title"></i></th>
-                        <th>Subject <i class="arrow down" onclick="sortTable(this,1)" id="sort_Title"></i></th>
-                        <th>Author <i class="arrow down" onclick="sortTable(this,2)" id="sort_Title"></i></th>
-                        <th>Description <i class="arrow down" onclick="sortTable(this,3)" id="sort_Title"></i></th>
-                        <th>Date <i class="arrow down" onclick="sortTable(this,4)" id="sort_Title"></i></th>
+                        <th>Title <i class="arrow down" onclick="sortTable('sort_Title',0)" id="sort_Title"></i></th>
+                        <th>Subject <i class="arrow down" onclick="sortTable('sort_Subject',1)" id="sort_Subject"></i></th>
+                        <th>Author <i class="arrow down" onclick="sortTable('sort_Author',2)" id="sort_Author"></i></th>
+                        <th>Description <i class="arrow down" onclick="sortTable('sort_Description',3)" id="sort_Description"></i></th>
+                        <th>Date <i class="arrow down" onclick="sortTable('sort_Date',4)" id="sort_Date"></i></th>
                     </tr>
                 </thead>
                 <tbody>

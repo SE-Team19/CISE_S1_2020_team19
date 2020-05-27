@@ -26,14 +26,14 @@ function sortTable(id ,n) {
             // If so, mark as a switch and break the loop:
             shouldSwitch = true;
             // Change the arrow
-            id.innerHTML = "<i class='arrow up' onclick='sortTable("+n+",this)' id='sort_Title'></i>"
+            var header = document.getElementById(id).className = "arrow up";
             break;
           }
         } else if (dir == "desc") {
           if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
             // If so, mark as a switch and break the loop:
             shouldSwitch = true;
-            id.innerHTML = "<i class='arrow down' onclick='sortTable("+n+",this)' id='sort_Title'></i>"
+            var header = document.getElementById(id).className = "arrow down";
             break;
           }
         }
