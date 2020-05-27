@@ -26,7 +26,6 @@ function sortTable(id ,n) {
             // If so, mark as a switch and break the loop:
             shouldSwitch = true;
             // Change the arrow
-            var onclickSort = "";
             id.innerHTML = "<i class='arrow up' onclick='sortTable("+n+","+id+")' id='sort_Title'></i>"
             break;
           }
