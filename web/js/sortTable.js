@@ -49,7 +49,7 @@ function sortTable(id ,n) {
         /* If no switching has been done AND the direction is "asc",
         set the direction to "desc" and run the while loop again. */
         if (switchcount == 0 && dir == "arrow up") {
-          dir = "arrow down";
+          dir.className = "arrow down";
           switching = true;
         } 
       }
