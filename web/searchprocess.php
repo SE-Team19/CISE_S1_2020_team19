@@ -59,10 +59,14 @@
 
                 
             <?php
-                $subject = $_POST['subject'];
+                $subject = $_POST['subject']; // Subject
+                $date_from = $_POST['date_from'];
+                $date_to = $_POST['date_to'];
                 $conn = pg_connect(getenv("DATABASE_URL"));
+                // User LOWER to make it case insensitive
                 $sql = "SELECT * FROM articles
-                        WHERE LOWER(subject) LIKE '$subject%'";
+                        WHERE subject ILIKE '$subject%' AND
+                        date BETWEEN '$date_from' AND '$date_to';";
                 $result = pg_query($sql);
                 $row = pg_fetch_assoc($result);
                 while ($row) {
