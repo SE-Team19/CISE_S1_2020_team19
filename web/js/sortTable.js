@@ -33,7 +33,7 @@ function sortTable(id ,n) {
           if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
             // If so, mark as a switch and break the loop:
             shouldSwitch = true;
-            id.innerHTML = "<i class='arrow down' onclick='sortTable("+n+","+id+")' id='sort_Title'></i>"
+            //id.innerHTML = "<i class='arrow down' onclick='sortTable("+n+","+id+")' id='sort_Title'></i>"
             break;
           }
         }
