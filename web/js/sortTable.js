@@ -4,7 +4,6 @@ function sortTable(id ,n) {
     switching = true;
     // Get the arrow direction:
     dir = document.getElementById(id).className;
-    alert(dir);
     /* Make a loop that will continue until
     no switching has been done: */
     while (switching) {
