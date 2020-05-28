@@ -3,7 +3,7 @@ function sortTable(id ,n) {
     table = document.getElementById("articleTable");
     switching = true;
     // Get the arrow direction:
-    dir = document.getElementById(id).className;
+    dir = "desc";
     /* Make a loop that will continue until
     no switching has been done: */
     while (switching) {
@@ -21,19 +21,20 @@ function sortTable(id ,n) {
         y = rows[i + 1].getElementsByTagName("TD")[n];
         /* Check if the two rows should switch place,
         based on the direction, asc or desc: */
-        if (dir == "arrow up") {
+        var arrow = document.getElementById(id).className;
+        if (dir == "asc") {
           if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
             // If so, mark as a switch and break the loop:
             shouldSwitch = true;
             // Change the arrow
-            dir = "arrow down";
+            arrow = "arrow down";
             break;
           }
-        } else if (dir == "arrow down") {
+        } else if (dir == "desc") {
           if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
             // If so, mark as a switch and break the loop:
             shouldSwitch = true;
-            dir = "arrow up";
+            arrow = "arrow up";
             break;
           }
         }
@@ -48,8 +49,8 @@ function sortTable(id ,n) {
       } else {
         /* If no switching has been done AND the direction is "asc",
         set the direction to "desc" and run the while loop again. */
-        if (switchcount == 0 && dir == "arrow up") {
-          dir.className = "arrow down";
+        if (switchcount == 0 && dir == "asc") {
+          dir = "desc";
           switching = true;
         } 
       }
