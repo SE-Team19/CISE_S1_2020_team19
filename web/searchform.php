@@ -42,56 +42,57 @@
                     <input type="date" name="date_from" id="date_from">
                     <label id="date_to_label">Date to</label>
                     <input type="date" name="date_to" id="date_to"><br>
-                    
+
                     <div id="parent">
-                        <label id="left"></label>                    
-                        <fieldset>   
+                        <label id="left"></label>
+                        <fieldset>
                             <label id="if_label" style="display: inline-block; margin-top: .5rem !important;">
                                 If
                             </label>
-                            <select name="opt_first">
-                                <option value="method">Method</option>
-                                <option value="benefit">Benefit</option>
-                                <option value="participants">Participants</option>
-                                <option value="best_practise">Best practise</option>
-                                <option value="advantage">Advantage</option>
-                                <option value="subject">Subject</option>
-                            </select>   
-                            <select name="opt_condition">
-                                <option value=contains>contains</option>
-                                <option value=is_equal_to>is equal to</option>
-                                <option value="and">and</option>
-                                <option value="or">or</option>
-                                <option value="not">not</option>
-                                <option value="and_or">and or</option>
-                                <option value="and_not">and not</option>
-                                <option value="or_not">or not</option>
+                            <select>
+                                <option value="method" name="condition1">Method</option>
+                                <option value="benefit" name="condition1">Benefit</option>
+                                <option value="participants" name="condition1">Participants</option>
+                                <option value="best_practise" name="condition1">Best practise</option>
+                                <option value="advantage" name="condition1">Advantage</option>
+                                <option value="subject" name="condition1">Subject</option>
                             </select>
-                            <select name="opt_second">
-                                <option value="tdd">TDD</option>
-                                <option value="performance">Performance</option>
-                                <option value="practitioner">Practitioner</option>
-                                <option value="scrum">Scrum</option>
-                                <option value="agile">Agile</option>
-                                <option value="testing">Testing</option>
-                                <option value="deployment">Deployment</option>
-                                <option value="automation">Automation</option>
-                                <option value="requirements">Requirements</option>
-                                <option value="feedback">Feedback</option>
-                                <option value="language">Language</option>
-                                <option value="iteration">Iteration</option>
-                                <option value="efficiency">Efficiency</option>
-                                <option value="error">Error</option>
+                            <select>
+                                <option value=contains name="condition2">contains</option>
+                                <option value=is_equal_toname="condition2">is equal to</option>
+                                <option value="and"name="condition2">and</option>
+                                <option value="or"name="condition2">or</option>
+                                <option value="not"name="condition2">not</option>
+                                <option value="and_or"name="condition2">and or</option>
+                                <option value="and_not"name="condition2">and not</option>
+                                <option value="or_not"name="condition2">or not</option>
+                            </select>
+                            <select>
+                                <option value="tdd" name="condition3">TDD</option>
+                                <option value="performance" name="condition3">Performance</option>
+                                <option value="practitioner" name="condition3">Practitioner</option>
+                                <option value="scrum" name="condition3">Scrum</option>
+                                <option value="agile" name="condition3">Agile</option>
+                                <option value="testing" name="condition3">Testing</option>
+                                <option value="deployment" name="condition3">Deployment</option>
+                                <option value="automation" name="condition3">Automation</option>
+                                <option value="requirements" name="condition3">Requirements</option>
+                                <option value="feedback" name="condition3">Feedback</option>
+                                <option value="language" name="condition3">Language</option>
+                                <option value="iteration" name="condition3">Iteration</option>
+                                <option value="efficiency" name="condition3">Efficiency</option>
+                                <option value="error" name="condition3">Error</option>
                             </select>
                             <button type="button"  id="add_button" onClick="add()">+</button>
                             <button type="button" id="remove_button" onClick="remove()">-</button>
                         </fieldset>
                         <label id="right"></label><br>
-                    </div> 
-
+                    </div>
+                    <button type="button" value="submit" id="submit_button">Submit</button>
+                    <button type="reset" value="reset" id="reset_button">Reset</button>
                 </div>
-            </form> 
-        </div>      
+            </form>
+        </div>
     </body>
 
     <!-- Footer -->
