@@ -40,7 +40,7 @@
         </header>
 
         <div class="seer_title_container">
-            <h1 class="seer_home" onclick="window.location.href='searchform.php'">SEER</h1>
+            <h1 style="text-align:center; class="seer_home" onclick="window.location.href='searchform.php'">SEER</h1>
         </div>
 
         <div class="container">
@@ -54,11 +54,10 @@
                 */
             ?>
         </div>
-    </body>
-    <!-- Footer -->
-    <div class="footer_container">
-        <footer>
-            <a href="about.html">About this website</a>
+        <footer class="footer">
+        <div id="footer">
+            <div id="footer_text">&nbsp &copy Copyright ENSE Team19, 2020 nbsp</div>
+            </div>
         </footer>
-    </div>
+    </body>
 </html>

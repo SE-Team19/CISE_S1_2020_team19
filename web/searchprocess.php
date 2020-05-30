@@ -54,11 +54,10 @@
                 echo '<button><a href="search.php">Return to Search</a></button>';
             ?>
         </div>
+        <footer class="footer">
+        <div id="footer">
+            <div id="footer_text">&nbsp &copy Copyright ENSE Team19, 2020 &nbsp </div>
+            </div>
+        </footer>  
     </body>
-    <!-- Footer -->
-    <div class="footer_container">
-        <footer>
-            <a href="about.html">About this website</a>
-        </footer>
-    </div>
 </html>

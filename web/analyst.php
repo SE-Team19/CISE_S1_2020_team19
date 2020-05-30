@@ -42,7 +42,7 @@
         </header>
 
             <div class="seer_title_container">
-                <h1 class="seer_home" onclick="window.location.href='searchform.php'">SEER</h1>
+                <h1 style="text-align:center; class="seer_home" onclick="window.location.href='searchform.php'">SEER</h1>
             </div>
 
             <div class="container">
@@ -57,36 +57,41 @@
                             <div id="analyst_journal_info_container">
                                 <label class="analyst_label">Title: </label>
                                     <br>
-                                <input type="text" name="title" class="analyst_input" placeholder="autofill:editable" value="autofill: editable">
+                                <input type="text" name="title" class="analyst_input" value="" readonly>
                                     <br>
                                 <label class="analyst_label">Author: </label>
                                     <br>
-                                <input type="text" name="author" class="analyst_input" placeholder="autofill:editable" value="autofill: editable">
+                                <input type="text" name="author" class="analyst_input" value="" readonly>
                                     <br>
-                                <label class="analyst_label">Year: </label>
+                                <label class="analyst_label">Date: </label>
                                     <br>
-                                <input type="text" name="year" class="analyst_input" placeholder="autofill:editable" value="autofill: editable">
+                                <input type="text" name="year" class="analyst_input" value="" readonly>
                                     <br>
                                 <label class="analyst_label">DOI: </label>
                                     <br>
-                                <input type="text" name="doi" class="analyst_input" placeholder="autofill:editable" value="autofill: editable">
+                                <input type="text" name="doi" class="analyst_input" value="" readonly>
                                     <br>
                             </div>
                         </div>
                         <div id="analyst_journal_right_container">
-                            <label class="analyst_label" id="analyst_journal_label">Journal: </label>
-                                <br>
-                            <input type="text" name="journal" class="analyst_input" id="analyst_input_journal" placeholder="Journal will be shown here" value="Journal will be shown here">
+                            <label class="analyst_label" id="analyst_journal_label">Description: </label>
+                            <br>
+                            <textarea name="description" rows="9" cols="48" class="analyst_input" readonly>
+                            </textarea>
                         </div>
                     </div>
+                    <button id="analyst_button">Get submission</button>
+                    <button id="analyst_button">Clear submission</button>
+                    <br><br>
+                    <button id="analyst_button">Approve</button>
+                    <button id="analyst_button">Reject</button>
                 </div>
             </div>
         </div>
-    </body>
-    <!-- Footer -->
-    <div class="footer_container">
-        <footer>
-            <a href="about.html">About this website</a>
+        <footer class="footer">
+        <div id="footer">
+            <div id="footer_text">&nbsp &copy Copyright ENSE Team19, 2020 &nbsp </div>
+            </div>
         </footer>
-    </div>
+    </body>
 </html>

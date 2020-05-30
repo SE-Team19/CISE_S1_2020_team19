@@ -55,16 +55,12 @@
                     <th><a href="google.com">Google</a></th>
                     <th>Date</th>
                 </tr>
-            </table>
-            
+            </table>           
         </div>
-
-
-        <!-- Footer -->
-        <footer class="footer fixed-bottom" style="background-color: #b8f4b8;"> <!-- container for page footer -->
-			<div class="container" style="padding:8px 6px;">
-				<a href="index.php" id="float-left">Return to Home Page</a>
-			</div>
-		</footer>
+        <footer class="footer">
+        <div id="footer">
+            <div id="footer_text">&nbsp &copy Copyright ENSE Team19, 2020 &nbsp </div>
+            </div>
+        </footer>
     </body>
 </html>
