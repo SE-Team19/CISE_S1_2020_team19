@@ -94,7 +94,7 @@
                 </div>
             </form>
         </div>
-        <footer class="footer">
+        <footer class=class="footer_admin">
         <div id="footer">
             <div id="footer_text">&nbsp &copy Copyright ENSE Team19, 2020 &nbsp </div>
             </div>
