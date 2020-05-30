@@ -42,9 +42,9 @@
                     <input type="date" name="date_from" id="date_from">
                     <label id="date_to_label">Date to</label>
                     <input type="date" name="date_to" id="date_to"><br>
-                    
-                    <div id="parent">                  
-                        <fieldset>   
+
+                    <div id="parent">
+                        <fieldset>
                             <label id="if_label" style="display: inline-block; margin-top: .5rem !important;">
                                 If
                             </label>
@@ -55,7 +55,7 @@
                                 <option value="best_practise" name="condition1">Best practise</option>
                                 <option value="advantage" name="condition1">Advantage</option>
                                 <option value="subject" name="condition1">Subject</option>
-                            </select>   
+                            </select>
                             <select>
                                 <option value=contains name="condition2">contains</option>
                                 <option value=is_equal_toname="condition2">is equal to</option>
@@ -92,12 +92,12 @@
                     <button type="button" value="submit" id="submit_button">Submit</button>
                     <button type="reset" value="reset" id="reset_button">Reset</button>
                 </div>
-            </form> 
-        </div> 
+            </form>
+        </div>
         <footer class="footer">
         <div id="footer">
             <div id="footer_text">&nbsp &copy Copyright ENSE Team19, 2020 &nbsp </div>
             </div>
-        </footer>   
+        </footer>
     </body>
 </html>
