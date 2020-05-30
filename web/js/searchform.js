@@ -8,8 +8,9 @@ function add(){
         let i=0;
         children.forEach(function(item){
             
-            if (i < 8){
+            if (i < 3){
                 var cln =item.cloneNode(true);
+                console.log(i + " : " + cln.nodeName);
                 parent.appendChild(cln);  
                 i++;
             }
@@ -22,7 +23,7 @@ function add(){
 function remove(){
     if (counter > 1){
         var node = document.getElementById("parent");
-        for (var i=0; i<8; i++){
+        for (var i=0; i<3; i++){
             node.removeChild(node.lastChild);
         }
 

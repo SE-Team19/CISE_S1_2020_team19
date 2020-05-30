@@ -38,7 +38,7 @@
             <?php
             // Connect using pgsql
             $conn = pg_connect(getenv("DATABASE_URL"));
-    
+
             if ($conn == false) {
                 echo "<p style='color:red;'>Connection to database failed. Error number: $conn->pg_last_error</p>";
                 die();
@@ -49,21 +49,37 @@
             pg_close($conn);
             ?>
 
+            <table class="table table-striped table-bordered mt-3">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Link</th>
+                    <th>Date</th>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <th>Quack</th>
+                    <th><a href="google.com">Google</a></th>
+                    <th>Date</th>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <th>Quack 2</th>
+                    <th><a href="google.com">Google</a></th>
+                    <th>Date</th>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <th>Quack 3</th>
+                    <th><a href="google.com">Google</a></th>
+                    <th>Date</th>
+                </tr>
+            </table>
         </div>
-
-        <!-- Move record to analyst queue -->
-        <script>
-            function moveToAnalyst() {
-                var xhttp = new XMLHttpRequest(); 
-                
-            }
-        </script>
-
-        <!-- Footer -->
-        <footer class="footer fixed-bottom" style="background-color: #b8f4b8;"> <!-- container for page footer -->
-			<div class="container" style="padding:8px 6px;">
-				<a href="index.php" id="float-left">Return to Home Page</a>
-			</div>
-		</footer>
+        <footer class="footer">
+        <div id="footer">
+            <div id="footer_text">&nbsp &copy Copyright ENSE Team19, 2020 &nbsp </div>
+            </div>
+        </footer>
     </body>
 </html>

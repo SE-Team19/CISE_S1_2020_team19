@@ -27,7 +27,7 @@
         </header>
 
         <div class="seer_title_container">
-            <h1 class="seer_home" style="text-align: center;" onclick="window.location.href='searchform.php'">SEER</h1>
+            <h1 class="seer_home" style="text-align: center;" onclick="window.location.href='searchform.php'" style="text-align:center;">SEER</h1>
         </div>
         <div id="form_wrapper">
             <h4>
@@ -44,7 +44,6 @@
                     <input type="date" name="date_to" id="date_to"><br>
 
                     <div id="parent">
-                        <label id="left"></label>
                         <fieldset>
                             <label id="if_label" style="display: inline-block; margin-top: .5rem !important;">
                                 If
@@ -86,19 +85,19 @@
                             <button type="button"  id="add_button" onClick="add()">+</button>
                             <button type="button" id="remove_button" onClick="remove()">-</button>
                         </fieldset>
-                        <label id="right"></label><br>
                     </div>
+                    <p style="display:inline-block;">Save query</p>
+                    <input type="checkbox" name="save" id="save" style="height: auto; margin: auto;">
+                    <br>
                     <button type="button" value="submit" id="submit_button">Submit</button>
                     <button type="reset" value="reset" id="reset_button">Reset</button>
                 </div>
             </form>
         </div>
-    </body>
-
-    <!-- Footer -->
-    <div class="footer_container">
-        <footer>
-            <a href="about.html">About this website</a>
+        <footer class="footer">
+        <div id="footer">
+            <div id="footer_text">&nbsp &copy Copyright ENSE Team19, 2020 &nbsp </div>
+            </div>
         </footer>
-    </div>
+    </body>
 </html>

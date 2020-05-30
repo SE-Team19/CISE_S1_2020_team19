@@ -21,11 +21,10 @@
             <h1>List of articles</h1>
             <h2>Articles waiting to be approved</h2>
         </div>
-        <!-- Footer -->
-        <footer class="footer fixed-bottom" style="background-color: #b8f4b8;"> <!-- container for page footer -->
-			<div class="container" style="padding:8px 6px;">
-				<a href="about.html" id="float-right">About this website</a>
-			</div>
-		</footer>
+        <footer class="footer">
+        <div id="footer">
+            <div id="footer_text">&nbsp &copy Copyright ENSE Team19, 2020 &nbsp </div>
+            </div>
+        </footer>
     </body>
 </html>

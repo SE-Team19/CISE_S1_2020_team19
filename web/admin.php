@@ -42,21 +42,22 @@
         </header>
 
         <div class="seer_title_container">
-            <h1 class="seer_home" onclick="window.location.href='searchform.php'">SEER</h1>
+            <h1 style="text-align:center; class="seer_home" onclick="window.location.href='searchform.php'">SEER</h1>
         </div>
 
         <div class="container">
             <h3 class="hr_title"> Administrator</h3>
-                <hr>
-                <br>
+            <hr>
+            <br>
+            
             <div id="user_search_container">
                 <form>
                     <div id="user_search_input_container">
                         <label id="user_input_label">Username:</label>
-                        <input class="searchbar" id="user_search" type="text" name="name" placeholder="Search" title="Search for users">
+                        <input class="searchbar" id="user_search" type="text" name="name" placeholder="">
                     </div>
                     <div id="user_role_select_container">
-                        <label id="user_role_label">Select User Role (Optional): </label>
+                        <label id="user_role_label">User Role (Optional): </label>
                         <select id="select_user_role" name="user_role_menu">
                             <option value="empty">-</option>
                             <option value="standard">Standard</option>
@@ -64,16 +65,18 @@
                             <option value="analyst">Analyst</option>
                             <option value="admin">Admin</option>
                         </select>
-                        <input class="button" id="admin_search_btn" type="button" name="admin_user_search" value="Search">
                     </div>
+                    <br>
+                    <button id="analyst_button">Update Role</button>
+                    <button id="analyst_button">Delete User</button>
+                    <br>
                 </form>
             </div>
         </div>
     </body>
-    <!-- Footer -->
-    <div class="footer_container">
-        <footer>
-            <a href="about.html">About this website</a>
-        </footer>
-    </div>
+    <footer class="footer_admin">
+    <div id="footer">
+            <div id="footer_text">&nbsp &copy Copyright ENSE Team19, 2020 &nbsp </div>
+            </div>
+    </footer>
 </html>
