@@ -82,7 +82,7 @@
                 $conn = pg_connect(getenv("DATABASE_URL"));
                 $sql = "SELECT * FROM articles
                         WHERE subject ILIKE '$subject%'" . 
-                        $date_sql ."AND description ILIKE '%$opt_first%';
+                        $date_sql ."AND description ILIKE '%$opt_first%'
                         AND description ILIKE '%$opt_second%';";
                 $result = pg_query($sql);
                 $row = pg_fetch_assoc($result);

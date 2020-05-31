@@ -50,31 +50,31 @@
                                 If
                             </label>
                             <select name="opt_first">
-                                <option value="method" name="condition1">Method</option>
-                                <option value="benefit" name="condition1">Benefit</option>
-                                <option value="participants" name="condition1">Participants</option>
-                                <option value="best_practise" name="condition1">Best practise</option>
-                                <option value="advantage" name="condition1">Advantage</option>
-                                <option value="subject" name="condition1">Subject</option>
+                                <option value="method">Method</option>
+                                <option value="benefit">Benefit</option>
+                                <option value="participants">Participants</option>
+                                <option value="best_practise">Best practise</option>
+                                <option value="advantage">Advantage</option>
+                                <option value="subject">Subject</option>
                             </select>
                             <select>
-                                <option value=contains name="condition2">contains</option>
+                                <option value=contains>contains</option>
                             </select>
                             <select name="opt_second">
-                                <option value="tdd" name="condition3">TDD</option>
-                                <option value="performance" name="condition3">Performance</option>
-                                <option value="practitioner" name="condition3">Practitioner</option>
-                                <option value="scrum" name="condition3">Scrum</option>
-                                <option value="agile" name="condition3">Agile</option>
-                                <option value="testing" name="condition3">Testing</option>
-                                <option value="deployment" name="condition3">Deployment</option>
-                                <option value="automation" name="condition3">Automation</option>
-                                <option value="requirements" name="condition3">Requirements</option>
-                                <option value="feedback" name="condition3">Feedback</option>
-                                <option value="language" name="condition3">Language</option>
-                                <option value="iteration" name="condition3">Iteration</option>
-                                <option value="efficiency" name="condition3">Efficiency</option>
-                                <option value="error" name="condition3">Error</option>
+                                <option value="tdd">TDD</option>
+                                <option value="performance">Performance</option>
+                                <option value="practitioner">Practitioner</option>
+                                <option value="scrum">Scrum</option>
+                                <option value="agile">Agile</option>
+                                <option value="testing">Testing</option>
+                                <option value="deployment">Deployment</option>
+                                <option value="automation">Automation</option>
+                                <option value="requirements">Requirements</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="language">Language</option>
+                                <option value="iteration">Iteration</option>
+                                <option value="efficiency">Efficiency</option>
+                                <option value="error">Error</option>
                             </select>
                             <button type="button"  id="add_button" onClick="add()">+</button>
                             <button type="button" id="remove_button" onClick="remove()">-</button>
