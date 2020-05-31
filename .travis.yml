@@ -4,9 +4,3 @@ dist: trusty
 
 php:
  - 7.4
-
-before_install:
-  - chmod 777 vendor/bin/phpunit
-
-before_script:
- - composer install --no-interaction
