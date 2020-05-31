@@ -77,14 +77,12 @@
                     $date_sql = " AND date BETWEEN '1990-01-01' AND '$date_to'";
                 }
                 $opt_first = $_POST['opt_first'];
-                $opt_condition = $_POST['opt_condition'];
                 $opt_second = $_POST['opt_second'];
 
                 $conn = pg_connect(getenv("DATABASE_URL"));
-                // Use tenary operator to check if user specified date
                 $sql = "SELECT * FROM articles
                         WHERE subject ILIKE '$subject%'" . 
-                        $date_sql ."AND description ILIKE '%$opt_first%';
+                        $date_sql ."AND description ILIKE '%$opt_first%'
                         AND description ILIKE '%$opt_second%';";
                 $result = pg_query($sql);
                 $row = pg_fetch_assoc($result);
