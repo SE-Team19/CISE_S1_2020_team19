@@ -1,6 +1,6 @@
 language: php
 
-Build dist: trusty
+Build dist: xenial
 
 php:
  -7.4
