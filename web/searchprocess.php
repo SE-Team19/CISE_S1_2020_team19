@@ -78,6 +78,8 @@
                 }
                 $opt_first = $_POST['opt_first'];
                 $opt_second = $_POST['opt_second'];
+                echo $opt_first[0];
+                echo $opt_second[0];
 
                 $conn = pg_connect(getenv("DATABASE_URL"));
                 $sql = sprintf("SELECT * FROM articles
