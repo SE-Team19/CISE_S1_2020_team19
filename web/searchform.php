@@ -81,7 +81,7 @@
                         </fieldset>
                         <label id="right"></label><br>
                     </div>
-                    <input type="submit">Submit</button>
+                    <input type="submit" id="submit_button">Submit</button>
                     <button type="reset" value="reset" id="reset_button">Reset</button>
                 </div>
             </form>
