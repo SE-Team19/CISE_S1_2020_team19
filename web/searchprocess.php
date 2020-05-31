@@ -80,10 +80,10 @@
                 $opt_second = $_POST['opt_second'];
 
                 $conn = pg_connect(getenv("DATABASE_URL"));
-                $sql = "SELECT * FROM articles
-                        WHERE subject ILIKE '$subject%'" . 
-                        $date_sql ."AND description ILIKE '%$opt_first%'
-                        AND description ILIKE '%$opt_second%';";
+                $sql = sprintf("SELECT * FROM articles
+                    WHERE subject ILIKE '$subject%'" . 
+                    $date_sql ."AND description ILIKE '%%%s%%'
+                    AND description ILIKE '%%%s%%';", $opt_first[0], $opt_second[0]); // $opt_first $opt_second
                 $result = pg_query($sql);
                 $row = pg_fetch_assoc($result);
                 while ($row) {

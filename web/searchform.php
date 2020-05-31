@@ -48,7 +48,7 @@
                             <label id="if_label" style="display: inline-block; margin-top: .5rem !important;">
                                 If
                             </label>
-                            <select name="opt_first">
+                            <select name="opt_first[]">
                                 <option value="method">Method</option>
                                 <option value="benefit">Benefit</option>
                                 <option value="participants">Participants</option>
@@ -59,7 +59,7 @@
                             <select>
                                 <option value=contains>contains</option>
                             </select>
-                            <select name="opt_second">
+                            <select name="opt_second[]">
                                 <option value="tdd">TDD</option>
                                 <option value="performance">Performance</option>
                                 <option value="practitioner">Practitioner</option>
