@@ -35,7 +35,7 @@
             </h4>
             <hr>
             <div id="form">
-                <form action="searchprocess.php" method="POST">
+                <form action="searchprocess.php" method="POST" id="searchform">
                     <label>Subject</label>
                     <input type="text" name="subject" id="subject_input" required><br>
                     <label>Date from</label>
@@ -81,8 +81,8 @@
                         </fieldset>
                         <label id="right"></label><br>
                     </div>
-                    <input type="submit" id="submit_button">Submit</button>
-                    <button type="reset" value="reset" id="reset_button">Reset</button>
+                    <input type="submit" id="submit_button"></button>
+                    <button type="reset" id="reset_button" onclick="document.getElementById('searchform').reset()">Reset</button>
                 </div>
             </form>
         </div>
