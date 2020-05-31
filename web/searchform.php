@@ -59,13 +59,6 @@
                             </select>
                             <select>
                                 <option value=contains name="condition2">contains</option>
-                                <option value=is_equal_toname="condition2">is equal to</option>
-                                <option value="and"name="condition2">and</option>
-                                <option value="or"name="condition2">or</option>
-                                <option value="not"name="condition2">not</option>
-                                <option value="and_or"name="condition2">and or</option>
-                                <option value="and_not"name="condition2">and not</option>
-                                <option value="or_not"name="condition2">or not</option>
                             </select>
                             <select>
                                 <option value="tdd" name="condition3">TDD</option>
