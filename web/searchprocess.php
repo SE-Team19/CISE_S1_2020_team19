@@ -84,8 +84,9 @@
                     WHERE subject ILIKE '$subject%'" . 
                     $date_sql ."AND description ILIKE '%%%s%%'
                     AND description ILIKE '%%%s%%';", $opt_first[0], $opt_second[0]); // $opt_first $opt_second
-                $result = pg_query($sql);
                 echo $sql;
+                $result = pg_query($sql);
+                
                 $row = pg_fetch_assoc($result);
                 while ($row) {
                     echo "<tr>";
