@@ -78,8 +78,6 @@
                 }
                 $opt_first = $_POST['opt_first'];
                 $opt_second = $_POST['opt_second'];
-                echo $opt_first[0];
-                echo $opt_second[0];
 
                 $conn = pg_connect(getenv("DATABASE_URL"));
                 $sql = sprintf("SELECT * FROM articles
@@ -87,6 +85,7 @@
                     $date_sql ."AND description ILIKE '%%%s%%'
                     AND description ILIKE '%%%s%%';", $opt_first[0], $opt_second[0]); // $opt_first $opt_second
                 $result = pg_query($sql);
+                echo $sql;
                 $row = pg_fetch_assoc($result);
                 while ($row) {
                     echo "<tr>";
