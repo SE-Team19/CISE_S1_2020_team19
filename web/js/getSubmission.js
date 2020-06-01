@@ -14,6 +14,7 @@ function getSubmission() {
             date.value = obj.date;
             doi.value = obj.doi;
             description.value = obj.description;
+            console.log(obj.title);
         }
     }
     xhttp.send();
