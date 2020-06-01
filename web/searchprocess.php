@@ -80,7 +80,6 @@
                 $opt_second = $_POST['opt_second'];
 
                 $conn = pg_connect(getenv("DATABASE_URL"));
-                // WIP
                 $sql = sprintf("SELECT * FROM articles
                     WHERE subject ILIKE '$subject%%'" . 
                     $date_sql ."AND description ILIKE '%%%s%%'
