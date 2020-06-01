@@ -1,10 +1,10 @@
 function getSubmission() {
     var xhttp = new XMLHttpRequest(); // Create XHR object
-    var title = document.getElementsByTagName("title")[0];
-    var author = document.getElementsByTagName("author")[0];
-    var date = document.getElementsByTagName("year")[0];
-    var doi = document.getElementsByTagName("doi")[0];
-    var description = document.getElementsByTagName("description")[0];
+    var title = document.getElementById("title");
+    var author = document.getElementById("author");
+    var date = document.getElementById("year");
+    var doi = document.getElementById("doi");
+    var description = document.getElementById("description");
     xhttp.open("GET", "moderator_get_submission.php"); // GET is fine for retrieving
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
