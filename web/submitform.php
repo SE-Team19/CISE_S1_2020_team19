@@ -105,7 +105,7 @@
                         <div id="analyst_journal_right_container">
                         <label class="analyst_label" id="analyst_journal_label">Description</label>
                         <br>
-                        <textarea name="description" rows="9" cols="48" class="analyst_input" readonly>
+                        <textarea name="description" rows="9" cols="48" style="width:100%;">
                         </textarea>    
                         </div>
                     </div>

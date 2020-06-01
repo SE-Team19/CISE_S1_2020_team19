@@ -20,14 +20,6 @@ Description: Custom CSS selectors and properties
 	margin-right: 10px;
 }
 
-#submit_button{
-	background-color: lightgreen;
-}
-
-#reset_button{
-	background-color: lightgrey;
-}
-
 #submit_button, #reset_button {
 	width: 75px;
 	margin-top: 5px;
@@ -37,12 +29,8 @@ Description: Custom CSS selectors and properties
 
 #submit_button{
 	margin-right: 52px;
-	background-color: lightgreen;
 }
 
-#reset_button{
-	background-color: lightgrey;
-}
 
 #form_wrapper {
 	margin-left: 150px;
@@ -62,21 +50,24 @@ form label {
 }
 
 #if_label {
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-left: 0px;
+	margin-right: 20px;
+}
+
+select, fieldset  {
+	text-align: center;
 }
 
 #add_button, #remove_button {
 	display: table-cell;
-	width: 30px;
+	width: 40px;
 	height:30px;
 	vertical-align: middle;
 	padding-bottom: 2px;
-	border-radius: 4px;
 	margin-left: 5px;
 	float: right;
 	margin-top: 4px;
-	margin-right: 10px;
+	margin-right: 5px;
 	font-weight: bold;
 }
 
@@ -94,7 +85,6 @@ form label {
 	transition: 0.3s;
 	cursor: pointer;
 	opacity: 0.6;
-	margin-right: 30px;
 	margin-left: 5px;
 }
 

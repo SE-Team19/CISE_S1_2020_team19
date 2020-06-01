@@ -81,7 +81,7 @@
                     </div>
                     <p style="display:inline-block;">Save query</p>
                     <input type="checkbox" name="save" id="save" style="height: auto; margin: auto;">
-                    <input type="submit" id="submit_button"></button>
+                    <button type="submit" value="submit" id="submit_button" >Submit</button>
                     <button type="reset" id="reset_button" onclick="document.getElementById('searchform').reset()">Reset</button>
                 </div>
             </form>
