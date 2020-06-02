@@ -80,7 +80,7 @@
                             </textarea>
                         </div>
                     </div>
-                    <button id="analyst_button" onclick="getSubmission('analyst_get_submission.php')">Get submission</button>
+                    <button id="analyst_button" onclick="getSubmission('analyst')">Get submission</button>
                     <button id="analyst_button" onclick="clearSubmission()">Clear submission</button>
                     <br><br>
                     <button id="analyst_button">Approve</button>

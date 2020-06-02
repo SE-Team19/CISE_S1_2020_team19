@@ -13,13 +13,17 @@ function getSubmission(type) {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var obj = JSON.parse(this.responseText);
-            title.value = obj.title;
-            author.value = obj.author;
-            date.value = obj.date;
-            doi.value = obj.doi;
-            description.value = obj.description;
-            console.log(obj.title);
+            // Alert the user if there are no pending reviews
+            if (obj != null) {
+                title.value = obj.title;
+                author.value = obj.author;
+                date.value = obj.date;
+                doi.value = obj.doi;
+                description.value = obj.description;
+            } else {
+                alert("No pending reviews");
             }
+        }
     }
     xhttp.send("type="+type);
 }
