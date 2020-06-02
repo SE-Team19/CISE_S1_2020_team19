@@ -1,6 +1,6 @@
 <?php
 $conn = pg_connect(getenv("DATABASE_URL"));
-$type = $_GET['type'];
+$type = $_POST['type'];
 $status;
 if ($type == "moderator") {
     $status = 'pending review';
