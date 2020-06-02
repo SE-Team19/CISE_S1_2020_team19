@@ -1,14 +1,15 @@
 /**
  * Get the first occurring submission from the database
  */
-function getSubmission() {
+function getSubmission(type) {
     var xhttp = new XMLHttpRequest(); // Create XHR object
     var title = document.getElementById("title");
     var author = document.getElementById("author");
     var date = document.getElementById("year");
     var doi = document.getElementById("doi");
     var description = document.getElementById("description");
-    xhttp.open("GET", "moderator_get_submission.php"); // GET is fine for retrieving
+    xhttp.open("POST", "process_submission.php", true); // Use POST method
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var obj = JSON.parse(this.responseText);
@@ -20,7 +21,7 @@ function getSubmission() {
             console.log(obj.title);
             }
     }
-    xhttp.send();
+    xhttp.send("type="+type);
 }
 /**
  * Clear submission of the moderator page

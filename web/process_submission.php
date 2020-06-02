@@ -1,8 +1,14 @@
 <?php
 $conn = pg_connect(getenv("DATABASE_URL"));
-
+$type = $_GET['type'];
+$status;
+if ($type == "moderator") {
+    $status = 'pending review';
+} else if ($type == "analyst") {
+    $status = 'processing';
+}
 $sql = "SELECT * FROM articles
-WHERE status = 'pending review'
+WHERE status = '$status'
 LIMIT 1;"; // Select the first occuring row where status has pending review
 
 $result = pg_query($sql); // Query the databse
