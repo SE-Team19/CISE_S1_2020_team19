@@ -1,3 +1,6 @@
+/**
+ * Get the first occurring submission from the database
+ */
 function getSubmission() {
     var xhttp = new XMLHttpRequest(); // Create XHR object
     var title = document.getElementById("title");
@@ -31,4 +34,14 @@ function getSubmission() {
             }
     }
     xhttp.send();
+}
+/**
+ * Clear submission of the moderator page
+ */
+function clearSubmission() {
+    document.getElementById("title").value = "";
+    document.getElementById("author").value = "";
+    document.getElementById("year").value = "";
+    document.getElementById("doi").value = "";
+    document.getElementById("description").value = "";
 }
