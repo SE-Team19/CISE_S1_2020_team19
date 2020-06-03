@@ -20,7 +20,7 @@ function getSubmission(type) {
         if (this.readyState == 4 && this.status == 200) {
             var obj = JSON.parse(this.responseText);
             // Alert the user if there are no pending reviews
-            if (obj != undefined) {
+            if (obj.title != null) {
                 title.value = obj.title;
                 author.value = obj.author;
                 date.value = obj.date;
