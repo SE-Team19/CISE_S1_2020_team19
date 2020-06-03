@@ -45,6 +45,7 @@ function approve(type) {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             alert(this.responseText);
+            clearSubmission();
         }
     }
     // Alert the user if there is no data in the form

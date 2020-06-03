@@ -10,5 +10,10 @@ final class EmailTest extends TestCase
             'user@example.com'
         );
     }
+
+    public function testConnectToDatabase(): void {
+        $conn = pg_connect(getenv("DATABASE_URL"));
+        $this->assertTrue($conn);
+    }
 }
 ?>
