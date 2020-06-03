@@ -44,17 +44,16 @@ function approve(type) {
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            // Alert the user if there is no data in the form
-            // Don't send the request
-            if (title.value == "") {
-                alert("No data in form");
-            }
-            else {
-                xhttp.send("type="+type+"&submit="+title.value);
-            }
+            alert(this.responseText);
         }
     }
-    
+    // Alert the user if there is no data in the form
+    // Don't send the request
+    if (title.value == "") {
+        alert("No data in form");
+    } else {
+        xhttp.send("type="+type+"&submit="+title.value);
+    }          
 }
 /**
  * Clear submission of the moderator page
