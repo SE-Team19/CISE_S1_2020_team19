@@ -1,11 +1,7 @@
 /**
  * Global variables for getting form data
  */
-var title = document.getElementById("title");
-var author = document.getElementById("author");
-var date = document.getElementById("year");
-var doi = document.getElementById("doi");
-var description = document.getElementById("description");
+
 
 /**
  * Get the first occurring submission from the database
@@ -13,7 +9,11 @@ var description = document.getElementById("description");
  */
 function getSubmission(type) {
     var xhttp = new XMLHttpRequest(); // Create XHR object
-    
+    var title = document.getElementById("title");
+    var author = document.getElementById("author");
+    var date = document.getElementById("year");
+    var doi = document.getElementById("doi");
+    var description = document.getElementById("description");
     xhttp.open("POST", "process_submission.php", true); // Use POST method
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.onreadystatechange = function () {
@@ -39,7 +39,7 @@ function getSubmission(type) {
  */
 function approve(type) {
     var xhttp = new XMLHttpRequest();
-
+    var title = document.getElementById("title");
     xhttp.open("POST", "process_submission.php", true); // Use POST method
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.onreadystatechange = function () {
@@ -60,9 +60,14 @@ function approve(type) {
  * Clear submission of the moderator page
  */
 function clearSubmission() {
+    var title = document.getElementById("title");
+    var author = document.getElementById("author");
+    var date = document.getElementById("year");
+    var doi = document.getElementById("doi");
+    var description = document.getElementById("description");
     title.value = "";
     author.value = "";
-    year.value = "";
+    date.value = "";
     doi.value = "";
     description.value = "";
 }
