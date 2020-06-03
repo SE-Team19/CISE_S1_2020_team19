@@ -1,39 +1,68 @@
 /**
+ * Global variables for getting form data
+ */
+var title = document.getElementById("title");
+var author = document.getElementById("author");
+var date = document.getElementById("year");
+var doi = document.getElementById("doi");
+var description = document.getElementById("description");
+
+/**
  * Get the first occurring submission from the database
+ * @param {String} type - The anaylst or moderator
  */
 function getSubmission(type) {
     var xhttp = new XMLHttpRequest(); // Create XHR object
-    var title = document.getElementById("title");
-    var author = document.getElementById("author");
-    var date = document.getElementById("year");
-    var doi = document.getElementById("doi");
-    var description = document.getElementById("description");
+    
     xhttp.open("POST", "process_submission.php", true); // Use POST method
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var obj = JSON.parse(this.responseText);
             // Alert the user if there are no pending reviews
-            if (obj != null) {
+            if (obj != undefined) {
                 title.value = obj.title;
                 author.value = obj.author;
                 date.value = obj.date;
                 doi.value = obj.doi;
                 description.value = obj.description;
             } else {
-                alert("No pending reviews");
+                alert("No pending submissions");
             }
         }
     }
     xhttp.send("type="+type);
 }
 /**
+ * Submits the article to another queue from processing
+ * @param {String} type - The analyst, moderator or submitter
+ */
+function approve(type) {
+    var xhttp = new XMLHttpRequest();
+
+    xhttp.open("POST", "process_submission.php", true); // Use POST method
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            // Alert the user if there is no data in the form
+            // Don't send the request
+            if (title.value == "") {
+                alert("No data in form");
+            }
+            else {
+                xhttp.send("type="+type+"&submit="+title.value);
+            }
+        }
+    }
+    
+}
+/**
  * Clear submission of the moderator page
  */
 function clearSubmission() {
-    document.getElementById("title").value = "";
-    document.getElementById("author").value = "";
-    document.getElementById("year").value = "";
-    document.getElementById("doi").value = "";
-    document.getElementById("description").value = "";
+    title.value = "";
+    author.value = "";
+    year.value = "";
+    doi.value = "";
+    description.value = "";
 }
