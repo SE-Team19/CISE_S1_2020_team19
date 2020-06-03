@@ -1,7 +1,7 @@
 <?php
 $conn = pg_connect(getenv("DATABASE_URL"));
-$type = $_POST['type'];
-$submit = $_POST['submit'];
+$type = $_POST['type']; // Moderator, analyst, or submitter
+$submit = $_POST['submit']; // Can be title or JSON
 $status = "";
 // Approving
 if ($type == "moderator-approve") {
@@ -18,7 +18,9 @@ if ($type == "moderator-approve") {
 else if ($type == "submitter") {
     submit($submit);
 }
-
+/**
+ * Approve submission based on status
+ */
 function approve($submit, $status) {
     // Goes from pending review to processing from the moderator
     if ($status == "pending review") {
@@ -31,8 +33,13 @@ function approve($submit, $status) {
     $sql = "UPDATE articles
             SET status = '$status'
             WHERE title ILIKE '$submit'";
-    pg_query($sql);
-    echo "Successfully approved";
+    $result = pg_query($sql);
+    if ($result == false) {
+        echo "Error approving submission: " + pg_last_error();
+    } else {
+        echo "Successfully approved";
+    }
+    
 }
 // Submit details to the database
 function submit($submit) {
