@@ -1,63 +1,27 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<?php
+// Decode json into object
+$obj = json_decode($_POST["json"]);
+$name = $obj->name;
+$email = $obj->email;
 
-        <!-- Stylesheet : Does this work? -->
-        <script src="css/style.css"></script>
+echo "<h3 class='hr_title'> Submit Article</h3>
+        <hr>
+        <br>
+        Thank you, $name!
+        <br>
+        <br>   
+        Your submission has been received and is now in Stage 2.
+        <br>
+        <br>
+        <br>
+        Stage 1: Submit ---> Stage 2: Moderation ---> Stage 3: Posted to SEER
+        <br>
+        <br>
+        <br>
+        A confirmation email has been sent to $email.
+        <br>
+        <br>
+        <button class='button' onclick='window.location.href='searchform.html''>Search</button>
+        <button class='button' onclick='newArticle()'>New Article</button>"
 
-        <!--Importing the CSS Stylesheet for design/visuals-->
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-        <!-- Popper JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <style> /* overrides Bootstrap CSS style made in multiple locations */
-			h1 {
-				color: #333333;
-				text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0,0,0,0.15);
-			}
-		</style>
-        <title>SEER</title>
-    </head>
-
-    <body>
-        <header>	<!-- container for navbar -->
-            <nav class="navbar">
-                <ul>
-                    <li><a href="submitform.php">Submit article</a></li>
-                    <li><a href="analyst.php">Journal Queue</a></li>
-                    <li><a href="user_account.php">My Account</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <div class="seer_title_container">
-            <h1 style="text-align:center; class="seer_home" onclick="window.location.href='searchform.php'">SEER</h1>
-        </div>
-
-        <div class="container">
-            <h3 class="hr_title"> Search</h3>
-            <hr>
-            <br>
-            <?php
-                /*
-                    code for saving article goes here 
-
-                */
-            ?>
-        </div>
-        <footer class="footer">
-        <div id="footer">
-            <div id="footer_text">&nbsp &copy Copyright ENSE Team19, 2020 nbsp</div>
-            </div>
-        </footer>
-    </body>
-</html>
+?>
