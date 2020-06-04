@@ -13,8 +13,9 @@ function submit(e) {
     var doi = form.getElementsByTagName("input")[5];
     var description = form.getElementsByTagName("textarea")[0];
     // Convert to JSON
-    var obj = JSON.stringify(name, email, title, author, date, doi, description);
-    console.log(obj);
+    var obj = {name, email, title, author, date, doi, description}
+    var json = JSON.stringify(obj);
+    console.log(json);
 }
 
 function reset() {
