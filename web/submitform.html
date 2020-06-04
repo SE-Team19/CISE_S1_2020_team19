@@ -82,16 +82,15 @@
                         <div id="analyst_journal_right_container">
                         <label class="analyst_label" id="analyst_journal_label">Description</label>
                         <br>
-                        <textarea name="description" rows="9" cols="48" class="analyst_input" readonly>
+                        <textarea name="description" rows="9" cols="48" class="analyst_input">
                         </textarea>    
                         </div>
                     </div>
-                    <button id="analyst_button">Submit</button>
-                    <button id="analyst_button">Reset</button>
+                    <input type="submit" id="analyst_button">
+                    <button id="analyst_button" onclick="reset()">Reset</button>
                     <br>
                 </div>
                 </form>
-            <?php endif; ?>
         </div>
         <footer class="footer">
         <div id="footer">
