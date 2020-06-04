@@ -20,5 +20,11 @@ final class SEERUnitTests extends TestCase
                             sslmode=require");
         $this->assertNotFalse($conn);
     }
+    // Test if it can select data from the database.
+    public function testSelectDataFromDB(): void {
+        $sql = "SELECT * FROM articles";
+        $result = pg_query($sql);
+        $this->assertNotFalse($result);
+    }
 }
 ?>
