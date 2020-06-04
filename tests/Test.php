@@ -26,5 +26,15 @@ final class SEERUnitTests extends TestCase
         $result = pg_query($sql);
         $this->assertNotFalse($result);
     }
+    // Test if it can Insert the data
+    public function testInsertDataInDB(): void {
+        $sql = "INSERT INTO articles (title, author, subject, date, description, status)
+                VALUES ('test', 'test', 'test', '2020-12-12', 'test', 'test')";
+        $result = pg_query($sql);
+        $this->assertNotFalse($result);
+        // Remove test row
+        $sql = "DELETE FROM articles WHERE title = 'test'";
+        pg_query($sql);
+    }
 }
 ?>
