@@ -21,7 +21,8 @@ Description: Custom CSS selectors and properties
 }
 
 #submit_button{
-	background-color: lightgreen;
+	background-color:  lightgrey;
+	margin-right: 52px;
 }
 
 #reset_button{
@@ -35,14 +36,6 @@ Description: Custom CSS selectors and properties
 	margin-left: 10px;
 }
 
-#submit_button{
-	margin-right: 52px;
-	background-color: lightgreen;
-}
-
-#reset_button{
-	background-color: lightgrey;
-}
 
 #form_wrapper {
 	margin-left: 150px;
@@ -219,10 +212,6 @@ hr {
 
 input {
 	margin: 5px;
-	padding: auto;
-	height: 36px;
-	text-indent: 5px;
-	border: 1px solid rgb(100,100,100);
 }
 
 /* assigning button defaults */
