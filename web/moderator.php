@@ -76,14 +76,15 @@
                         <div id="analyst_journal_right_container">
                         <label class="analyst_label" id="analyst_journal_label">Description</label>
                         <br>
-                        <textarea name="description" rows="9" cols="48" class="analyst_input" readonly>
+                        <textarea name="description" rows="7" cols="48" class="analyst_input" readonly>
                         </textarea>    
                         </div>
                     </div>
-                    <button id="analyst_button">Get submission</button>
-                    <button id="analyst_button">Clear submission</button>
+                    <button id="moderator_button">Get submission</button>
+                    <button id="moderator_button">Clear submission</button>
                     <br><br>
-                    <button id="analyst_button">Submit</button>
+                    <button id="moderator_button">Approve</button>
+                    <button id="moderator_button">Reject</button>
                 </div>
             </div>
         </div>
