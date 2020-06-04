@@ -86,6 +86,10 @@ function newArticle() {
         <br>
     </div>
     </form>`;
+    // Re-add the event listener
+    form = document.getElementById("seer-form");
+    // Add event listener to prevent form from being submitted
+    form.addEventListener("submit", submit);
 }
 
 function reset() {

@@ -14,7 +14,6 @@ echo "<h3 class='hr_title'> Submit Article</h3>
         <br>
         <br>
         <br>
-        <!-- image of steps (s1: submit > s2: moderation > posted to SEER) -->
         Stage 1: Submit ---> Stage 2: Moderation ---> Stage 3: Posted to SEER
         <br>
         <br>
