@@ -22,6 +22,7 @@ function submit(e) {
                 "description":description }
     var json = JSON.stringify(obj);
     console.log(json);
+    console.log(name);
 }
 
 function reset() {
