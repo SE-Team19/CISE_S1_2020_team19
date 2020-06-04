@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 use PHPUnit\Framework\TestCase;
 
-final class EmailTest extends TestCase
+final class SEERUnitTests extends TestCase
 {
     public function testCanBeUsedAsString(): void
     {
@@ -12,7 +12,7 @@ final class EmailTest extends TestCase
     }
     // Test if it can connect to PostgreSQL
     public function testConnectToDatabase(): void {
-        $conn = pg_connect("host=aec2-52-71-55-81.compute-1.amazonaws.com
+        $conn = pg_connect("host=ec2-52-71-55-81.compute-1.amazonaws.com
                             dbname=d7n9b1n1v1sh20
                             port=5432
                             user=ujebccinfaqukt
