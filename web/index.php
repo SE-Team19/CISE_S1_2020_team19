@@ -6,7 +6,7 @@
     </head>
     <body>
         <?php
-            header("Location: searchform.php");
+            header("Location: searchform.html");
             exit();
         ?>
     </body>

@@ -70,19 +70,18 @@
                 $date_to = $_POST['date_to'];
                 $date_sql = "";
                 if ($date_from != "" && $date_to != "") { // Both dates are set
-                    $date_sql = " AND date BETWEEN '$date_from' AND '$date_to'";
+                    $date_sql = "AND date BETWEEN '$date_from' AND '$date_to'";
                 } else if ($date_from != "") { // Only date from is set
-                    $date_sql = " AND date BETWEEN '$date_from' AND '$today'";
+                    $date_sql = "AND date BETWEEN '$date_from' AND '$today'";
                 } else if ($date_to != "") { // Only date_to is set
-                    $date_sql = " AND date BETWEEN '1990-01-01' AND '$date_to'";
+                    $date_sql = "AND date BETWEEN '1990-01-01' AND '$date_to'";
                 }
                 $opt_first = $_POST['opt_first'];
                 $opt_second = $_POST['opt_second'];
-
+                
                 $conn = pg_connect(getenv("DATABASE_URL"));
-                // WIP
                 $sql = sprintf("SELECT * FROM articles
-                    WHERE subject ILIKE '$subject%%'" . 
+                    WHERE subject ILIKE '$subject%%' " . 
                     $date_sql ."AND description ILIKE '%%%s%%'
                     AND description ILIKE '%%%s%%';", $opt_first[0], $opt_second[0]); // $opt_first $opt_second
                 if (isset($opt_first[1]) && isset($opt_second[1])) {

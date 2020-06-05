@@ -5,7 +5,7 @@ Description: Custom CSS selectors and properties
 */
 
 /* ALL ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-#analyst_button {
+#analyst_button, #moderator_button {
 	float: right;
 	width: 150px;
 	margin-top: 15px;
@@ -20,15 +20,20 @@ Description: Custom CSS selectors and properties
 	margin-right: 10px;
 }
 
+#submit_button{
+	background-color:  lightgrey;
+	margin-right: 52px;
+}
+
+#reset_button{
+	background-color: lightgrey;
+}
+
 #submit_button, #reset_button {
 	width: 75px;
 	margin-top: 5px;
 	float: right;
 	margin-left: 10px;
-}
-
-#submit_button{
-	margin-right: 52px;
 }
 
 
@@ -209,10 +214,6 @@ hr {
 
 input {
 	margin: 5px;
-	padding: auto;
-	height: 36px;
-	text-indent: 5px;
-	border: 1px solid rgb(100,100,100);
 }
 
 /* assigning button defaults */
@@ -225,7 +226,7 @@ input {
     text-align: center;
     text-decoration: none;
 	display: inline-block;
-	
+
 	font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
     color: rgb(100,100,100);
@@ -238,12 +239,12 @@ input {
 	background-color: #f5f5f5;
 	border-color: inherit;
 }
-  
+
   #main {
 	overflow:auto;
 	padding-bottom:20px; /* this needs to be bigger than footer height*/
   }
-  
+
   .footer {
 	position: relative;
 	margin-top: 20px; /* negative value of footer height */
@@ -251,7 +252,7 @@ input {
 	clear:both;
 	padding-top:20px;
 	bottom:0px;
-  } 
+  }
 
   .footer_admin {
 	position: absolute;
@@ -259,7 +260,7 @@ input {
 	width: 100%;
 	margin-top: 50px; /* negative value of footer height */
 	margin-bottom: -50px;
-  } 
+  }
 
   #footer{
 	  background-color: lightgray;
@@ -372,12 +373,12 @@ input {
 	padding: 3px;
 	cursor: pointer;
   }
-  
+
   .up {
 	transform: rotate(-135deg);
 	-webkit-transform: rotate(-135deg);
   }
-  
+
   .down {
 	transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
@@ -413,7 +414,7 @@ input {
 			margin: 0;
 			padding: 0;
 		}
-		
+
 	.date_input_container {
 		margin: 0;
 		padding: 0;
@@ -428,11 +429,11 @@ input {
 		float: right;
 		text-align: left;
 	}
-		
+
 		.date_input {
 			margin: auto;
 			width: 100%;
-			
+
 		}
 /* ++++++++++++++++++++++++++++++ */
 
@@ -466,7 +467,7 @@ input {
 		float: left;
 		text-align: left;
 	}
-	
+
 		.select_field {
 			margin: auto;
 			width: 150px;
@@ -669,18 +670,18 @@ input {
 				width: 100%;
 				text-align: left;
 			}
-			
+
 				.analyst_label {
 					margin: 0;
 					padding: 0;
 					text-align: left;
 				}
-				
+
 				.analyst_input {
 					margin: 0 0 10px 0;
 					padding: 0;
 					width: 100%;
-				}			
+				}
 
 		#analyst_journal_right_container {
 			margin: 0;
@@ -727,13 +728,13 @@ table {
 	border-collapse: collapse;
 	width: 100%;
   }
-  
+
   th, td {
 	border: 1px solid #dddddd;
 	text-align: left;
 	padding: 8px;
   }
-  
+
   tr:nth-child(even) {
 	background-color: #dddddd;
   }

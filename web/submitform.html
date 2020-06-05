@@ -5,9 +5,6 @@
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-        <!-- Stylesheet : Does this work? -->
-        <script src="css/style.css"></script>
-
         <!--Importing the CSS Stylesheet for design/visuals-->
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -19,6 +16,7 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
         <style> /* overrides Bootstrap CSS style made in multiple locations */
 			h1 {
 				color: #333333;
@@ -29,67 +27,75 @@
     </head>
 
     <body>
-        <header>	<!-- container for navbar -->
+    <header>	<!-- container for navbar -->
             <nav class="navbar">
                 <ul>
-                    <li><a href="submitform.php">Submit Article</a></li>
-                    <li><a href="moderator.php">Moderator Queue</a></li>
-                    <li><a href="analyst.php">Analyst Queue</a></li>
+                    <li><a href="submitform.html">Submit Article</a></li>
+                    <li><a href="moderator.html">Moderator Queue</a></li>
+                    <li><a href="analyst.html">Analyst Queue</a></li>
                     <li><a href="admin.php">Admin</a></li>
                     <li><a href="user_account.php">My Account</a></li>
                 </ul>
             </nav>
         </header>
 
-            <div class="seer_title_container">
-                <h1 style="text-align:center; class="seer_home" onclick="window.location.href='searchform.php'">SEER</h1>
-            </div>
+        <div class="seer_title_container">
+            <h1 style="text-align:center;" class="seer_home" onclick="window.location.href='searchform.html'">SEER</h1>
+        </div>
 
-            <div class="container">
-            
-                <h3 class="hr_title"> Moderator Queue</h3>
+        <div class="container" id="form-container">
+
+                <!-- Submitter details (initial page) -->
+                <h3 class="hr_title"> New Article</h3>
                 <hr>
-                <br>
-                <!-- have a tabbed panel (current journal / journal queue) -->
-                <div id="analyst_journal_table_container">
+                <!-- send form to self for now: in future, send to submitprocess.php -->
+                <form id="seer-form">
+                        Name:<input class="namebar" type="text" name="name"
+                        pattern="[a-zA-Z]{1,}" title="Name must only contains only letters" required>
+                            <br>
+                        Email: <input class="emailbar" type="text" name="email"
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Email must be email@something.something" required>
+                    <br>
+                    <br>
+                    <div id="analyst_journal_table_container">
                     <div id="analyst_journal_container">
                         <div id="analyst_journal_left_container">
                             <div id="analyst_journal_info_container">
                                 <label class="analyst_label">Title: </label>
                                     <br>
-                                <input type="text" name="title" class="analyst_input" value="" readonly>
+                                <input type="text" name="title" class="analyst_input" value="" >
                                     <br>
                                 <label class="analyst_label">Author: </label>
                                     <br>
-                                    <input type="text" name="author" class="analyst_input" value="" readonly>
+                                <input type="text" name="author" class="analyst_input" value="">
                                     <br>
                                 <label class="analyst_label">Date: </label>
                                     <br>
-                                <input type="text" name="year" class="analyst_input" value="" readonly>
+                                <input type="text" name="year" class="analyst_input" value="">
                                     <br>
                                 <label class="analyst_label">DOI: </label>
                                     <br>
-                                <input type="text" name="doi" class="analyst_input" value="" readonly>
+                                <input type="text" name="doi" class="analyst_input" value="">
                                     <br>
                             </div>
                         </div>
                         <div id="analyst_journal_right_container">
                         <label class="analyst_label" id="analyst_journal_label">Description</label>
                         <br>
-                        <textarea name="description" rows="9" cols="48" class="analyst_input" readonly>
-                        </textarea>    
+                        <textarea name="description" rows="9" cols="48" class="analyst_input">
+                        </textarea>
                         </div>
                     </div>
-                    <button id="analyst_button">Get submission</button>
-                    <button id="analyst_button">Clear submission</button>
-                    <br><br>
-                    <button id="analyst_button">Submit</button>
+                    <input type="submit" id="analyst_button">
+                    <button id="analyst_button" onclick="reset()">Reset</button>
+                    <br>
                 </div>
-            </div>
+                </form>
         </div>
         <footer class="footer">
+            <script src="js/submit.js"></script>
         <div id="footer">
-            <div id="footer_text">&nbsp &copy Copyright ENSE Team19, 2020 &nbsp </div>
+            <div id="footer_text">&nbsp &copy Copyright ENSE Team19, 2020 &nbsp</div>
             </div>
         </footer>
     </body>
