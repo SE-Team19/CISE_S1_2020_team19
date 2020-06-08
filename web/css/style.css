@@ -55,21 +55,24 @@ form label {
 }
 
 #if_label {
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-left: 0px;
+	margin-right: 20px;
+}
+
+select, fieldset  {
+	text-align: center;
 }
 
 #add_button, #remove_button {
 	display: table-cell;
-	width: 30px;
+	width: 40px;
 	height:30px;
 	vertical-align: middle;
 	padding-bottom: 2px;
-	border-radius: 4px;
 	margin-left: 5px;
 	float: right;
 	margin-top: 4px;
-	margin-right: 10px;
+	margin-right: 5px;
 	font-weight: bold;
 }
 
@@ -87,7 +90,6 @@ form label {
 	transition: 0.3s;
 	cursor: pointer;
 	opacity: 0.6;
-	margin-right: 30px;
 	margin-left: 5px;
 }
 
@@ -224,7 +226,7 @@ input {
     text-align: center;
     text-decoration: none;
 	display: inline-block;
-	
+
 	font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
     color: rgb(100,100,100);
@@ -237,12 +239,12 @@ input {
 	background-color: #f5f5f5;
 	border-color: inherit;
 }
-  
+
   #main {
 	overflow:auto;
 	padding-bottom:20px; /* this needs to be bigger than footer height*/
   }
-  
+
   .footer {
 	position: relative;
 	margin-top: 20px; /* negative value of footer height */
@@ -250,7 +252,7 @@ input {
 	clear:both;
 	padding-top:20px;
 	bottom:0px;
-  } 
+  }
 
   .footer_admin {
 	position: absolute;
@@ -258,7 +260,7 @@ input {
 	width: 100%;
 	margin-top: 50px; /* negative value of footer height */
 	margin-bottom: -50px;
-  } 
+  }
 
   #footer{
 	  background-color: lightgray;
@@ -371,12 +373,12 @@ input {
 	padding: 3px;
 	cursor: pointer;
   }
-  
+
   .up {
 	transform: rotate(-135deg);
 	-webkit-transform: rotate(-135deg);
   }
-  
+
   .down {
 	transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
@@ -412,7 +414,7 @@ input {
 			margin: 0;
 			padding: 0;
 		}
-		
+
 	.date_input_container {
 		margin: 0;
 		padding: 0;
@@ -427,11 +429,11 @@ input {
 		float: right;
 		text-align: left;
 	}
-		
+
 		.date_input {
 			margin: auto;
 			width: 100%;
-			
+
 		}
 /* ++++++++++++++++++++++++++++++ */
 
@@ -465,7 +467,7 @@ input {
 		float: left;
 		text-align: left;
 	}
-	
+
 		.select_field {
 			margin: auto;
 			width: 150px;
@@ -668,18 +670,18 @@ input {
 				width: 100%;
 				text-align: left;
 			}
-			
+
 				.analyst_label {
 					margin: 0;
 					padding: 0;
 					text-align: left;
 				}
-				
+
 				.analyst_input {
 					margin: 0 0 10px 0;
 					padding: 0;
 					width: 100%;
-				}			
+				}
 
 		#analyst_journal_right_container {
 			margin: 0;
@@ -726,13 +728,13 @@ table {
 	border-collapse: collapse;
 	width: 100%;
   }
-  
+
   th, td {
 	border: 1px solid #dddddd;
 	text-align: left;
 	padding: 8px;
   }
-  
+
   tr:nth-child(even) {
 	background-color: #dddddd;
   }

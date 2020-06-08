@@ -13,7 +13,7 @@
 		</style>
         <title>SEER</title>
     </head>
-    <body>
+    <body onload=setDate()>
         <header>
             <nav class="navbar">
                 <ul>
@@ -36,6 +36,21 @@
             <hr>
             <div id="form">
                 <form action="searchprocess.php" method="POST" id="searchform">
+                    <label>Technique</label>
+                    <select name="opt_first[]">
+                        <option id="subject_input" value="tdd">TDD</option>
+                        <option id="subject_input" value="waterfall">Waterfall</option>
+                        <option id="subject_input" value="scrum">Scrum</option>
+                        <option id="subject_input" value="agile">Agile</option>
+                        <option id="subject_input" value="kanban">Kanban</option>
+                        <option id="subject_input" value="xp">XP</option>
+                        <option id="subject_input" value="retrospective">Retrospective</option>
+                        <option id="subject_input" value="devops">DevOps</option>
+                        <option id="subject_input" value="lean">Lean</option>
+                        <option id="subject_input" value="velocity">Velocity</option>
+                        <option id="subject_input" value="timebox">Timebox</option>
+                        <option id="subject_input" value="requirements">Requirements</option>
+                    </select>
                     <label>Date from</label>
                     <input type="date" name="date_from" id="date_from">
                     <label id="date_to_label">Date to</label>

@@ -111,10 +111,10 @@
                 </tbody>
             </table>
         </div>
-        <footer class="footer">
+        <footer class="footer_admin">
         <div id="footer">
             <div id="footer_text">&nbsp &copy Copyright ENSE Team19, 2020 &nbsp </div>
-            </div>
-        </footer>  
+            </div></div>
+        </footer>
     </body>
 </html>
