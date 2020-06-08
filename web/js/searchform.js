@@ -58,6 +58,6 @@ function setDate() {
     document.getElementById("date_to").setAttribute("max", todays_date);
 }
 
-var body = document.getElementsByTagName("body")[0];
+var body = document.getElementById("searchform");
 body.innerHTML = "";
 body.addEventListener("onload", setDate);
