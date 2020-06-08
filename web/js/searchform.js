@@ -31,7 +31,7 @@ function remove(){
     }    
 }
 
-function setDate(){
+function setDate() {
     var today = new Date();
     var current_day = today.getDate();
     var current_year = today.getFullYear();
