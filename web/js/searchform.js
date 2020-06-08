@@ -58,3 +58,5 @@ function setDate() {
     document.getElementById("date_to").setAttribute("max", todays_date);
 }
 
+var body = document.getElementsByTagName("body")[0];
+body.addEventListener("onload", setDate);
