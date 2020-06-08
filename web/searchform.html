@@ -13,7 +13,7 @@
 		</style>
         <title>SEER</title>
     </head>
-    <body onload="setDate()">
+    <body>
         <header>
             <nav class="navbar">
                 <ul>
@@ -52,7 +52,7 @@
                         <option id="subject_input" value="requirements">Requirements</option>
                     </select>
                     <label>Date from</label>
-                    <input type="date" name="date_from" id="date_from">
+                    <input type="date" name="date_from" id="date_from" onclick="setDate()">
                     <label id="date_to_label">Date to</label>
                     <input type="date" name="date_to" id="date_to"><br>
 
