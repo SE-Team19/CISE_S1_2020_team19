@@ -40,11 +40,12 @@ function getSubmission(type) {
 function approve(type) {
     var xhttp = new XMLHttpRequest();
     var title = document.getElementById("title");
+    var statusSpan = document.getElementById("submit-status");
     xhttp.open("POST", "process_submission.php", true); // Use POST method
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            alert(this.responseText);
+            statusSpan.innerHTML = this.responseText;
             clearSubmission();
         }
     }
@@ -55,6 +56,26 @@ function approve(type) {
     } else {
         xhttp.send("type="+type+"&submit="+title.value);
     }          
+}
+function reject() {
+    var xhttp = new XMLHttpRequest();
+    var title = document.getElementById("title");
+    var statusSpan = document.getElementById("submit-status");
+    xhttp.open("POST", "process_submission.php", true); // Use POST method
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            statusSpan.innerHTML = this.responseText;
+            clearSubmission();
+        }
+    }
+    // Alert the user if there is no data in the form
+    // Don't send the request
+    if (title.value == "") {
+        alert("No data in form");
+    } else {
+        xhttp.send("type=reject&submit="+title.value);
+    }         
 }
 /**
  * Clear submission of the moderator page

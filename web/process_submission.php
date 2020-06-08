@@ -17,6 +17,9 @@ if ($type == "moderator-approve") {
 // Submitting
 else if ($type == "submitter") {
     submit($submit);
+} else if ($type == "reject") {
+    // Rejecting
+    reject($submit);
 }
 /**
  * Approve submission based on status
@@ -35,11 +38,25 @@ function approve($submit, $status) {
             WHERE title ILIKE '$submit'";
     $result = pg_query($sql);
     if ($result == false) {
-        echo "Error approving submission: " + pg_last_error();
+        echo "<h3 style='color:red;'>Error approving submission: " + pg_last_error() + "</h3>";
     } else {
-        echo "Successfully approved";
+        echo "<h3 style='color:green;'>Successfully approved" + "</h3>";
     }
     
+}
+/**
+ * Rejects a submission and sets their status to rejected
+ */
+function reject($submit) {
+    $sql = "UPDATE articles
+            SET status = 'rejected'
+            WHERE title ILIKE '$submit'";
+    $result = pg_query($sql);
+    if ($result == false) {
+        echo "<h3 style='color:red;'>Error rejected submission: " + pg_last_error() + "</h3>";
+    } else {
+        echo "<h3 style='color:green;'>Successfully rejected" + "</h3>";
+    } 
 }
 // Submit details to the database
 function submit($submit) {
