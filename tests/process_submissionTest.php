@@ -1,32 +1,5 @@
 <?php declare(strict_types=1);
 use PHPUnit\Framework\TestCase;
-/**
- * Approve submission based on status
- */
-function approve($submit, $status) {
-        // Goes from pending review to processing from the moderator
-        if ($status == "pending review") {
-            $status = "processing";
-        } else if ($status == "processing") {
-            // Goes to approved from the analyst
-            $status = "approved";
-        }
-        // Just need the title to update status row
-        $sql = "UPDATE articles
-                SET status = '$status'
-                WHERE title ILIKE '$submit'";
-        $result = pg_query($sql);
-        
-    }
-    /**
-     * Rejects a submission and sets their status to rejected
-     */
-    function reject($submit) {
-        $sql = "UPDATE articles
-                SET status = 'rejected'
-                WHERE title ILIKE '$submit'";
-        $result = pg_query($sql);
-    }
 
 final class ApproveRejectTestCase extends TestCase {
     
