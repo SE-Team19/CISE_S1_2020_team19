@@ -1,8 +1,43 @@
 <?php declare(strict_types=1);
 use PHPUnit\Framework\TestCase;
 
-use function PHPUnit\Framework\assertEquals;
-require_once dirname(dirname(__FILE__)) . "/web/process_submission.php";
+/**
+ * Approve submission based on status
+ */
+function approve($submit, $status) {
+        // Goes from pending review to processing from the moderator
+        if ($status == "pending review") {
+            $status = "processing";
+        } else if ($status == "processing") {
+            // Goes to approved from the analyst
+            $status = "approved";
+        }
+        // Just need the title to update status row
+        $sql = "UPDATE articles
+                SET status = '$status'
+                WHERE title ILIKE '$submit'";
+        $result = pg_query($sql);
+        if ($result == false) {
+            echo "<h3 style='color:red;'>Error approving submission: " + pg_last_error() + "</h3>";
+        } else {
+            echo "<h3 style='color:green;'>Successfully approved" + "</h3>";
+        }
+        
+    }
+    /**
+     * Rejects a submission and sets their status to rejected
+     */
+    function reject($submit) {
+        $sql = "UPDATE articles
+                SET status = 'rejected'
+                WHERE title ILIKE '$submit'";
+        $result = pg_query($sql);
+        if ($result == false) {
+            echo "<h3 style='color:red;'>Error rejected submission: " + pg_last_error() + "</h3>";
+        } else {
+            echo "<h3 style='color:green;'>Successfully rejected" + "</h3>";
+        } 
+    }
 
 final class ApproveRejectTestCase extends TestCase {
     
