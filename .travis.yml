@@ -5,8 +5,5 @@ dist: trusty
 php:
  - 7.4
 
-install:
-  - php web/process_submission.php
-
 script:
   - phpunit tests
