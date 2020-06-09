@@ -17,11 +17,6 @@ function approve($submit, $status) {
                 SET status = '$status'
                 WHERE title ILIKE '$submit'";
         $result = pg_query($sql);
-        if ($result == false) {
-            echo "<h3 style='color:red;'>Error approving submission: " + pg_last_error() + "</h3>";
-        } else {
-            echo "<h3 style='color:green;'>Successfully approved" + "</h3>";
-        }
         
     }
     /**
