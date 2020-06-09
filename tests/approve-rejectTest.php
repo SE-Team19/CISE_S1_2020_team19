@@ -2,7 +2,7 @@
 use PHPUnit\Framework\TestCase;
 
 use function PHPUnit\Framework\assertEquals;
-require_once dirname(__FILE__) . "../web/process_submission.php";
+require_once dirname(dirname(__FILE__)) . "../web/process_submission.php";
 
 final class ApproveRejectTestCase extends TestCase {
     
