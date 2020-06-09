@@ -6,7 +6,7 @@ php:
  - 7.4
 
 install:
-  - ./web/process_submission.php
+  - php web/process_submission.php
 
 script:
   - phpunit tests
