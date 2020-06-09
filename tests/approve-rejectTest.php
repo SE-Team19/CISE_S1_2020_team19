@@ -2,6 +2,7 @@
 use PHPUnit\Framework\TestCase;
 
 use function PHPUnit\Framework\assertEquals;
+require_once("../web/process_submission.php");
 
 final class ApproveRejectTestCase extends TestCase {
     
@@ -17,9 +18,11 @@ final class ApproveRejectTestCase extends TestCase {
         pg_query($sql);
 
         $sql = "UPDATE articles
-                SET status = 'processing'
+                SET status = 'pending review'
                 WHERE title = 'TEST'";
         pg_query($sql);
+
+        approve("TEST", "pending review");
 
         $sql = "SELECT status from articles
                 WHERE title = 'TEST'";
