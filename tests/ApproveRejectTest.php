@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 use PHPUnit\Framework\TestCase;
-require_once(dirname(__FILE__, 2) . "./src/process_submission.php");
+require_once(dirname(__FILE__, 2) . "/src/process_submission.php");
 final class ApproveRejectTestCase extends TestCase {
     
     function testApprove(): void {
