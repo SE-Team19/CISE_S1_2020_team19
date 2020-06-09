@@ -12,8 +12,8 @@ final class ApproveRejectTestCase extends TestCase {
                             user=ujebccinfaqukt
                             password=5bc5f1199e72b3a45bcd320fad11fcd5464ac989651150d10681d498fa65ff08
                             sslmode=require");
-        $sql = "INSERT INTO articles (title, status)
-                VALUES ('TEST', 'pending review')";
+        $sql = "INSERT INTO articles (title, author, status)
+                VALUES ('TEST', 'TEST', 'pending review')";
         pg_query($sql);
 
         $sql = "UPDATE articles
