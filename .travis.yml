@@ -5,11 +5,8 @@ dist: trusty
 php:
  - 7.4
 
-deploy:
-  provider: heroku
-  api_key: 
-    secure: "22907334-3ee3-4de6-8466-d5c4d7189d71"
-
+install:
+  - ./web/process_submission.php
 
 script:
   - phpunit tests
