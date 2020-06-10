@@ -28,7 +28,7 @@ final class ApproveRejectTestCase extends TestCase {
         $actual = pg_fetch_assoc($result);
 
 
-        $this->assertEquals("processing", $actual['status']);
+        $this->assertEquals("processin", $actual['status']);
 
         // Clean up
         $sql = "DELETE FROM articles
