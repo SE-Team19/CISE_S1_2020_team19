@@ -32,9 +32,9 @@
         <header>	<!-- container for navbar -->
             <nav class="navbar">
                 <ul>
-                    <li><a href="submitform.php">Submit Article</a></li>
-                    <li><a href="moderator.php">Moderator Queue</a></li>
-                    <li><a href="analyst.php">Analyst Queue</a></li>
+                    <li><a href="submitform.html">Submit Article</a></li>
+                    <li><a href="moderator.html">Moderator Queue</a></li>
+                    <li><a href="analyst.html">Analyst Queue</a></li>
                     <li><a href="admin.php">Admin</a></li>
                     <li><a href="user_account.php">My Account</a></li>
                 </ul>
@@ -42,7 +42,7 @@
         </header>
 
         <div class="seer_title_container">
-            <h1 style="text-align:center; class="seer_home" onclick="window.location.href='searchform.php'">SEER</h1>
+            <h1 style="text-align:center; class="seer_home" onclick="window.location.href='searchform.html'">SEER</h1>
         </div>
 
         <div class="container">
