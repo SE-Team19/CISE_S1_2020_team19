@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 use PHPUnit\Framework\TestCase;
-require_once(dirname(dirname(__FILE__)) . "src/submitprocess.php");
+require_once(dirname(dirname(__FILE__)) . "/src/submitprocess.php");
 $conn = pg_connect("host=ec2-52-71-55-81.compute-1.amazonaws.com
                             dbname=d7n9b1n1v1sh20
                             port=5432
