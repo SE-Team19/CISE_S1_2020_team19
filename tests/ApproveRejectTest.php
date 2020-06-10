@@ -67,6 +67,11 @@ final class ApproveRejectTestCase extends TestCase {
                 WHERE title = 'TEST'";
         pg_query($sql);
     }
+
+    function testGetSubmission(): void {
+            $json = get("pending review");
+            $this->assertNotEquals("", $json);
+    }
 }
 
 ?>

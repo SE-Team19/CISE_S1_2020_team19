@@ -18,10 +18,9 @@ function getSubmission(type) {
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText);
-            var obj = JSON.parse(this.responseText);
             // Alert the user if there are no pending reviews
-            if (obj.title != null) {
+            if (this.responseText != "") {
+                var obj = JSON.parse();
                 title.value = obj.title;
                 author.value = obj.author;
                 date.value = obj.date;

@@ -77,5 +77,6 @@ function get($status) {
     $output = pg_fetch_assoc($result); // Return as associative array
     
     echo json_encode($output);
+    return $output;
 }
 ?>
