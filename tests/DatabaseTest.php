@@ -3,6 +3,7 @@ use PHPUnit\Framework\TestCase;
 
 final class DatabaseTest extends TestCase
 {
+    // Dummy test to see if unit testing works
     public function testCanBeUsedAsString(): void
     {
         $this->assertEquals(
