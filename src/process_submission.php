@@ -62,12 +62,6 @@ function reject($submit) {
         echo "<h3 style='color:green;'>Successfully rejected" . "</h3>";
     } 
 }
-// Submit details to the database
-function submit($submit) {
-    // Use JSON 
-    $sql = "INSERT INTO articles (title, author, subject, date, description, status)
-    VALUES ()";
-}
 // Get submission from database
 function get($status) {
     $sql = "SELECT * FROM articles
