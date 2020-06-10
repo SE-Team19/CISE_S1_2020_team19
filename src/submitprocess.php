@@ -12,7 +12,7 @@ function submit($title, $author, $subject, $date, $description) {
 
 }
 
-echo "<h3 class='hr_title'> Submit Article</h3>
+/*echo "<h3 class='hr_title'> Submit Article</h3>
     <hr>
     <br>
     Thank you, $name!
@@ -31,5 +31,5 @@ echo "<h3 class='hr_title'> Submit Article</h3>
     <br>
     <button class='button' onclick='window.location.href='searchform.html''>Search</button>
     <button class='button' onclick='newArticle()'>New Article</button>"
-
+*/
 ?>
