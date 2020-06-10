@@ -42,7 +42,7 @@
         </header>
 
         <div class="seer_title_container">
-            <h1 style="text-align:center; class="seer_home" onclick="window.location.href='search.php'">SEER</h1>
+            <h1 style="text-align:center; class="seer_home" onclick="window.location.href='search.html'">SEER</h1>
         </div>
 
         <div class="container">
