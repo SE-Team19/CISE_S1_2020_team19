@@ -16,6 +16,9 @@ final class SubmitTest extends TestCase
         submit("TEST","TEST","TEST","TEST","TEST");
         $result = pg_query($sql);
         $this->assertGreaterThan(0, pg_num_rows($result), "Rows must be greater than 0");
+        // Clean up
+        $sql = "DELETE FROM articles WHERE title = 'TEST'";
+        pg_query($sql);
     }
 }
 ?>
