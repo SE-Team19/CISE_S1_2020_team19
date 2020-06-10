@@ -54,13 +54,13 @@
                 <form id="login_form">
                     <div>
                         <label>Username:</label>
-                        <input class="searchbar" id="login_input" type="text" name="user_name" placeholder="">
+                        <input class="searchbar" id="login_input" type="text" name="user_name" placeholder="guest">
                     </div>
                     <div>
                         <label>Password:&nbsp;</label>
-                        <input class="searchbar" id="login_input" type="text" name="password" placeholder="">
+                        <input class="searchbar" id="login_input" type="text" name="password" placeholder="guest">
                     </div>
-                    <button id="analyst_button">Login</button>
+                    <button id="analyst_button" onclick="window.location.href='searchform.html'">Login</button>
                 </form>   
             </div>
         </div>    
