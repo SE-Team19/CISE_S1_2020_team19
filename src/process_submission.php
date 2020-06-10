@@ -1,6 +1,6 @@
 <?php
 // If POST request is recieved then initialize variables
-if (isset($_POST['type']) && isset($_POST['submit'])) {
+if (isset($_POST['type']) || isset($_POST['submit'])) {
     $conn = pg_connect(getenv("DATABASE_URL"));
     $type = $_POST['type']; // Moderator, analyst, or submitter
     $submit = $_POST['submit']; // Can be title or JSON
