@@ -19,6 +19,7 @@ function submit($title, $author, $date, $doi, $description) {
     $sql = "INSERT INTO articles (title, author, date, doi, description)
             VALUES ('$title', '$author', '$date', '$doi', '$description')";
     $result = pg_query($sql);
+    echo pg_num_rows($result);
 
     if (pg_num_rows($result) > 0 && isset($name) && isset($email)) {
         echo "<h3 class='hr_title'> Submit Article</h3>
