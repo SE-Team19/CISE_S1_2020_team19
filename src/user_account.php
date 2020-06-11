@@ -51,7 +51,7 @@
             <br>
 
             <div id="login_div">  
-                <form id="login_form">
+                <form id="login_form" novalidate>
                     <div>
                         <label>Username:</label>
                         <input class="searchbar" id="login_input" type="text" name="user_name" placeholder="guest">
@@ -60,7 +60,7 @@
                         <label>Password:&nbsp;</label>
                         <input class="searchbar" id="login_input" type="text" name="password" placeholder="guest">
                     </div>
-                    <button id="analyst_button" onclick="window.location.href='searchform.html'">Login</button>
+                    <button id="analyst_button" type="submit" onclick="window.location.href='searchform.html'">Login</button>
                 </form>   
             </div>
         </div>    
