@@ -5,6 +5,22 @@ Description: Custom CSS selectors and properties
 */
 
 /* ALL ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#login_div {
+	display: block;
+	text-align: center;
+}
+
+#login_form {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
+#login_input {
+	width: 300px;
+}
+
 #analyst_button, #moderator_button {
 	float: right;
 	width: 150px;
@@ -752,7 +768,7 @@ table {
 
 	#user_search_input_container {
 		margin: 0;
-		padding: 6px 0 0 0;
+		padding: 5px 5px 0 0;
 		width: 50%;
 		height: 50px;
 		float: left;

@@ -32,9 +32,10 @@
         <header>	<!-- container for navbar -->
             <nav class="navbar">
                 <ul>
-                    <li><a href="submitform.php">Submit Article</a></li>
-                    <li><a href="moderator.php">Journal Queue</a></li>
-                    <li><a href="analyst.php">Journal Queue</a></li>
+                <li><a href="submitform.html">Submit Article</a></li>
+                    <li><a href="moderator.html">Moderator Queue</a></li>
+                    <li><a href="analyst.html">Analyst Queue</a></li>
+                    <li><a href="admin.php">Admin</a></li>
                     <li><a href="user_account.php">My Account</a></li>
                 </ul>
             </nav>

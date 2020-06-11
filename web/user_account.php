@@ -32,9 +32,9 @@
         <header>
             <nav class="navbar">
                 <ul>
-                    <li><a href="submitform.php">Submit Article</a></li>
-                    <li><a href="moderator.php">Moderator Queue</a></li>
-                    <li><a href="analyst.php">Analyst Queue</a></li>
+                <li><a href="submitform.html">Submit Article</a></li>
+                    <li><a href="moderator.html">Moderator Queue</a></li>
+                    <li><a href="analyst.html">Analyst Queue</a></li>
                     <li><a href="admin.php">Admin</a></li>
                     <li><a href="user_account.php">My Account</a></li>
                 </ul>
@@ -42,7 +42,7 @@
         </header>
 
         <div class="seer_title_container">
-            <h1 style="text-align:center; class="seer_home" onclick="window.location.href='searchform.php'">SEER</h1>
+            <h1 style="text-align:center; class="seer_home" onclick="window.location.href='searchform.html'">SEER</h1>
         </div>
 
         <div class="container">
@@ -50,59 +50,24 @@
             <hr>
             <br>
 
-            <div class="container_account">
-                <h3 class="">User Name: User Role</h3>
-                <hr>
-                <br>
-                <label id="articles_submitted_label">Articles submitted:</label>
-                <label id="articles_submitted">* row# where article accepted=true</label>
-                    <br>
-                    <br>
-                <h5>Article history</h5>
-                    <br>
-                <table>
-                    <tr>
-                        <th>Title</th>
-                        <th>Author</th> 
-                        <th>Year</th>
-                        <th>DOI</th>
-                        <th>Accepted</th>
-                    </tr>
-                    <tr>
-                        <td>Example</td>
-                        <td>Example</td> 
-                        <td>2020</td>
-                        <td>Example</td>
-                        <td>True</td>
-                    </tr>
-                    <tr>
-                        <td>Example</td>
-                        <td>Example</td>
-                        <td>2020</td>
-                        <td>Example</td>
-                        <td>False</td>
-                    </tr>
-                    <tr>
-                        <td>Example</td>
-                        <td>Example</td> 
-                        <td>2020</td>
-                        <td>Example</td>
-                        <td>True</td>
-                    </tr>
-                    <tr>
-                        <td>Example</td>
-                        <td>Example</td>
-                        <td>2020</td>
-                        <td>Example</td>
-                        <td>False</td>
-                    </tr>
-                </table>
+            <div id="login_div">  
+                <form id="login_form">
+                    <div>
+                        <label>Username:</label>
+                        <input class="searchbar" id="login_input" type="text" name="user_name" placeholder="">
+                    </div>
+                    <div>
+                        <label>Password:&nbsp;</label>
+                        <input class="searchbar" id="login_input" type="text" name="password" placeholder="">
+                    </div>
+                    <button id="analyst_button">Login</button>
+                </form>   
             </div>
-        </div>
-        <footer class="footer">
+        </div>    
+        <footer class="footer_admin">
         <div id="footer">
-            <div id="footer_text">&nbsp &copy Copyright ENSE Team19, 2020 nbsp</div>
+            <div id="footer_text">&nbsp &copy Copyright ENSE Team19, 2020 &nbsp </div>
             </div>
         </footer>
-    </body>  
+    </body>
 </html>
