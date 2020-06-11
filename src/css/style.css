@@ -24,8 +24,12 @@ Description: Custom CSS selectors and properties
 #analyst_button, #moderator_button {
 	float: right;
 	width: 150px;
-	margin-top: 15px;
-	margin-left:15px;
+	margin-left: 5px;
+	margin-top: 10px;
+}
+
+#moderator_button {
+	margin-left: 5px;
 }
 
 #submit_button, #reset_button {
@@ -46,7 +50,8 @@ Description: Custom CSS selectors and properties
 }
 
 #submit_button, #reset_button {
-	width: 75px;
+	width: 80px;
+	height: 30px;
 	margin-top: 5px;
 	float: right;
 	margin-left: 10px;
@@ -781,6 +786,9 @@ table {
 			width: 15%;
 			float: center;
 			text-align: center;
+			line-height: none!important;
+			margin-top: 7.5px;
+			margin-bottom: 7.5px;
 		}
 
 		#user_search {
