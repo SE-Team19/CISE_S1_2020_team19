@@ -60,7 +60,7 @@
                         <label id="user_role_label">User Role (Optional): </label>
                         <select id="select_user_role" name="user_role_menu">
                             <option value="empty">-</option>
-                            <option value="standard">Standard</option>
+                            <option value="standard">User</option>
                             <option value="moderator">Moderator</option>
                             <option value="analyst">Analyst</option>
                             <option value="admin">Admin</option>
