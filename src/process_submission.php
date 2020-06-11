@@ -15,11 +15,7 @@ if (isset($_POST['type']) || isset($_POST['submit'])) {
         get("pending review");
     } else if ($type == "analyst-get") {
         get("processing");
-    } 
-    // Submitting
-    else if ($type == "submitter") {
-        submit($submit);
-    } else if ($type == "reject") {
+    }  else if ($type == "reject") {
         // Rejecting
         reject($submit);
     }
