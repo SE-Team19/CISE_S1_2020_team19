@@ -13,7 +13,7 @@ final class SubmitTest extends TestCase
     function testSubmit() {
         $sql = "SELECT title FROM articles
                 WHERE title = 'TEST'";
-        submit("TEST","TEST","2020-12-12","TEST","TEST");
+        submit("TEST", "TEST","TEST","TEST","2020-12-12","TEST","TEST");
         $result = pg_query($sql);
         $this->assertGreaterThan(0, pg_num_rows($result), "Rows must be greater than 0");
         // Clean up

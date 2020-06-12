@@ -67,6 +67,9 @@
 
                 
             <?php
+                if (isset($_POST['doi'])) {
+                    $doi = $_POST['doi'];
+                }
                 $today = date('Y-m-d');
                 $date_from = $_POST['date_from'];
                 $date_to = $_POST['date_to'];
@@ -89,6 +92,10 @@
                 if (isset($opt_first[1]) && isset($opt_second[1])) {
                     $sql .= sprintf("AND description ILIKE '%%%s%%'
                     AND description ILIKE '%%%s%%'", $opt_first[1], $opt_second[1]);
+                }
+                if (isset($_POST['doi'])) {
+                    $doi = $_POST['doi'];
+                    $sql .= "AND doi ILIKE '$doi'";
                 }
                 $result = pg_query($sql);
                 

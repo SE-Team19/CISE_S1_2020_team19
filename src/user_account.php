@@ -50,7 +50,7 @@
             <hr>
             <br>
 
-            <div id="login_div">  
+            <div id="login_div">
                 <form id="login_form" action="searchform.html" novalidate>
                     <div>
                         <label>Username:</label>
@@ -61,9 +61,9 @@
                         <input class="searchbar" id="login_input" type="text" name="password" value="guest">
                     </div>
                     <button id="login_button" type="submit">Login</button>
-                </form>   
+                </form>
             </div>
-        </div>    
+        </div>
         <footer class="footer_admin">
         <div id="footer">
             <div id="footer_text">&nbsp &copy Copyright ENSE Team19, 2020 &nbsp </div>
