@@ -27,8 +27,11 @@
 
                         //Recipients
                         //$mail->setFrom('zanealexanderdenize@gmail.com', 'Zane Senize');
+                        $email = urldecode($_POST['email']);
+                        $name = urldecode($_POST['name']);
+                        
                         $mail->setFrom('dtm0650@autuni.ac.nz', '17991980');
-                        $mail->addAddress('zanealexanderdenize@gmail.com', 'Zane Denize');     // Add a recipient
+                        $mail->addAddress($email, $name);     // Add a recipient
                         //$mail->addAddress('ellen@example.com');               // Name is optional
                         //$mail->addReplyTo('info@example.com', 'Information');
                         //$mail->addCC('cc@example.com');
