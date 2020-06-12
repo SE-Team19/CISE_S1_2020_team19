@@ -101,7 +101,7 @@
                         </textarea>    
                         </div>
                     </div>
-                    <button id="analyst_button">Submit</button>
+                    <button id="analyst_button" click="sendEmail()">Submit</button>
                     <button id="analyst_button">Reset</button>
                     <br>
                 </div>

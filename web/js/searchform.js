@@ -30,3 +30,33 @@ function remove(){
         counter--;
     }    
 }
+
+//create XMLHttpRequest object
+var xhr; //create global variable
+function createRequest() {
+    xhr = false;
+    if (window.XMLHttpRequest) {
+        xhr = new XMLHttpRequest();
+    }
+    else if (window.ActiveXObject) {
+        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    return xhr;
+}
+
+function sendMail(){
+    var xhr = createRequest();
+    if (xhr){
+        xhr.open("POST", dataSource, true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        var requestbody = "first_name=" + encodeURIComponent(first_name) + "&last_name="
+        + encodeURIComponent(last_name) + "&phone=" + encodeURIComponent(phone)
+    ;
+
+        xhr.onreadystatechange = processResponse;
+
+        xhr.send(requestbody);
+    }
+
+}
