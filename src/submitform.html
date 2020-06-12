@@ -16,7 +16,7 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
+        <script src="js/submit.js"></script>
         <style> /* overrides Bootstrap CSS style made in multiple locations */
 			h1 {
 				color: #333333;
@@ -87,7 +87,7 @@
                         </div>
                     </div>
                     <br>
-                    <button type="submit" id="analyst_button">Submit</button>
+                    <button type="submit" id="analyst_button" click="sendEmail(name.value, email.value)">Submit</button>
                     <button id="analyst_button" onclick="reset()">Reset</button>
                     <br>
                 </div>
