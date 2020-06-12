@@ -1,0 +1,846 @@
+/*
+
+Description: Custom CSS selectors and properties
+
+*/
+
+/* ALL ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#login_div {
+	display: block;
+	text-align: center;
+}
+
+#login_form {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
+#login_input {
+	width: 300px;
+}
+
+#login_button {
+	width: 80px;
+	margin-left: 310px;
+}
+
+#analyst_button, #moderator_button {
+	float: right;
+	width: 150px;
+	margin-left: 5px;
+	margin-top: 10px;
+}
+
+#moderator_button {
+	margin-left: 5px;
+}
+
+#submit_button, #reset_button {
+	display: inline-block;
+	width: 80px;
+	margin-top: 5px;
+	margin-left: 0px;
+	margin-right: 10px;
+}
+
+#submit_button{
+	background-color:  lightgrey;
+	margin-right: 52px;
+}
+
+#reset_button{
+	background-color: lightgrey;
+}
+
+#submit_button, #reset_button {
+	width: 80px;
+	height: 30px;
+	margin-top: 5px;
+	float: right;
+	margin-left: 10px;
+}
+
+
+#form_wrapper {
+	margin-left: 150px;
+	margin-right: 150px;
+}
+
+form label {
+	font-weight:bold;
+}
+
+#subject_input {
+	width: 80%;
+}
+
+#date_to_label {
+	margin-left: 30px;
+}
+
+#if_label {
+	margin-left: 0px;
+	margin-right: 20px;
+}
+
+select, fieldset  {
+	text-align: center;
+}
+
+#add_button, #remove_button {
+	display: table-cell;
+	width: 40px;
+	height:30px;
+	vertical-align: middle;
+	padding-bottom: 2px;
+	margin-left: 5px;
+	float: right;
+	margin-top: 4px;
+	margin-right: 5px;
+	font-weight: bold;
+}
+
+#remove_button {
+	background-color: #f44336;
+	transition: 0.3s;
+	cursor: pointer;
+	opacity: 0.6;
+	margin-left: 3px;
+	margin-left: 90px
+}
+
+#add_button {
+	background-color: #008CBA;
+	transition: 0.3s;
+	cursor: pointer;
+	opacity: 0.6;
+	margin-left: 5px;
+}
+
+#add_button:hover, #remove_button:hover {
+	opacity: 1;
+}
+
+#left, #right {
+	width: 0px;
+}
+
+fieldset {
+	display: inline-block;
+	border: solid;
+	border-width: 1px;
+	align-items: center !important;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 90%;
+	text-align: center;
+	background-color: #e9e9e9;
+}
+
+select {
+	width: 125px;
+	margin-left:5px;
+	margin-right:5px;
+}
+
+header {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.navbar {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background-color: white;
+}
+
+ul {
+	margin: 0 auto;
+	padding: 0;
+	display: inline-block;
+	list-style-type: none;
+	text-align: center;
+	background-color: white;
+  }
+
+li {
+	margin: auto 10px;
+	padding: 10px;
+	width: 180px;
+	float: left;
+	text-align: center;
+	border-bottom: 5px solid transparent;
+}
+
+li:hover {
+	background-color: rgb(0, 139, 0, 0.1);;
+	border-bottom: 5px solid rgb(0, 139, 0);
+}
+
+li a {
+	margin: auto 0;
+	padding: 15px;
+	display: block;
+	color: black;
+}
+
+li a:hover {
+	text-decoration: none;
+	color: rgb(0, 139, 0);
+}
+
+/* title: seer */
+.seer_title_container {
+	margin: 0;
+	padding: 10px;
+	background: white;
+}
+
+.seer_home {
+	cursor: pointer;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	min-height: calc(100vh - 50px);
+	position: relative;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 10px;
+	/* for visual styling */
+	padding-top: 0;
+	width: 100%;
+}
+
+h2, h3, h4, h5 {
+	margin: 0;
+	margin-top: 10px;
+}
+
+/* page title (under SEER) */
+.hr_title {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	white-space: pre;
+}
+
+hr {
+	margin: 0;
+	margin-bottom: 10px;
+	border: 0.5px solid rgb(200,200,200);
+}
+
+input {
+	margin: 5px;
+}
+
+/* assigning button defaults */
+.button {
+	/* input type button */
+	margin: 10px;
+	padding: 0 2px 0 0;
+	height: 38px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+	display: inline-block;
+
+	font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(100,100,100);
+    background-color: white;
+    border: 1px solid rgb(100,100,100);
+}
+
+.button:hover {
+	text-decoration: underline;
+	background-color: #f5f5f5;
+	border-color: inherit;
+}
+
+  #main {
+	overflow:auto;
+	padding-bottom:20px; /* this needs to be bigger than footer height*/
+  }
+
+  .footer {
+	position: relative;
+	margin-top: 20px; /* negative value of footer height */
+	height: 20px;
+	clear:both;
+	padding-top:20px;
+	bottom:0px;
+  }
+
+  .footer_admin {
+	position: absolute;
+	bottom:0px;
+	width: 100%;
+	margin-top: 50px; /* negative value of footer height */
+	margin-bottom: -50px;
+  }
+
+  #footer{
+	  background-color: lightgray;
+	  text-align: right;
+  }
+
+
+/* index.php +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+#signin_container {
+	margin: 0 auto;
+	width: 30%;
+	text-align: center;
+}
+
+#signin_title {
+	margin: 40px 0 0 0;
+}
+
+#username {
+	width: 80%;
+}
+
+#password {
+	width: 80%;
+}
+
+#signin_btn {
+	margin: 5px 0;
+	padding: 0 2px 0 0;
+	width: 80%;
+}
+
+/* searchform.php +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+#searchform_container {
+	padding-top: 25px;
+	width: 55%;
+	height: 500px;
+}
+
+/* container for description block */
+#description_container {
+	margin: 0;
+	padding: 0;
+	height: 50px;
+	text-align: center;
+}
+
+	#description_label_container {
+		margin: 0;
+		padding: 0;
+		padding-right: 15px;
+		width: 12%;
+		height: inherit;
+		line-height: 50px;
+		float: left;
+		text-align: right;
+	}
+
+		#description_label {
+			margin: 0;
+			padding: 0;
+		}
+
+	#description_input_container {
+		margin: 0;
+		padding: 0;
+		padding-top: 7px;
+		width: 88%;
+		height: inherit;
+		float: right;
+		text-align: center;
+	}
+
+		#description_input {
+			margin: auto;
+			width: 100%;
+		}
+
+/* container for date block */
+
+#date_container {
+	margin: 0;
+	padding: 0;
+	height: 50px;
+	text-align: center;
+}
+
+	#date_label_container {
+		margin: 0;
+		padding: 0;
+		padding-right: 15px;
+		width: 20%;
+		height: inherit;
+		line-height: 50px;
+		float: left;
+		text-align: right;
+	}
+
+			#date_label1 {
+				margin: 0;
+				padding: 0;
+			}
+/* +++++++++++++searchprocess.php++++++++++++++++ */
+.arrow {
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	cursor: pointer;
+  }
+
+  .up {
+	transform: rotate(-135deg);
+	-webkit-transform: rotate(-135deg);
+  }
+
+  .down {
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+  }
+
+/* +++++++++++++++++++++++++++++ */
+#date_range_container {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: inherit;
+}
+
+	#date_label_container {
+		margin: 0;
+		padding: 0;
+		width: 12%;
+		text-align: left;
+	}
+
+	.date_label_container {
+		margin: 0;
+		padding: 0;
+		padding-right: 6px;
+		width: 8%;
+		height: inherit;
+		line-height: 50px;
+		float: left;
+		text-align: center;
+	}
+
+		#date_label2, #date_label3 {
+			margin: 0;
+			padding: 0;
+		}
+
+	.date_input_container {
+		margin: 0;
+		padding: 0;
+		padding-top: 7px;
+		width: 36%;
+		height: inherit;
+		float: left;
+		text-align: right;
+	}
+
+	#date_input_container {
+		float: right;
+		text-align: left;
+	}
+
+		.date_input {
+			margin: auto;
+			width: 100%;
+
+		}
+/* ++++++++++++++++++++++++++++++ */
+
+#condition_container, .add_condition_block {
+	margin: 0;
+	padding: 0;
+	height: 50px;
+	text-align: center;
+}
+
+	#condition_label_container {
+		margin: 0;
+		padding: 0;
+		width: 12%;
+		height: inherit;
+		line-height: 50px;
+		float: left;
+		text-align: left;
+	}
+
+		#condition_label {
+			margin: auto;
+		}
+
+	.condition_select_container {
+		margin: 0;
+		padding: 0;
+		padding-top: 10px;
+		width: 25%;
+		height: inherit;
+		float: left;
+		text-align: left;
+	}
+
+		.select_field {
+			margin: auto;
+			width: 150px;
+		}
+
+	.search_btn_container {
+		margin: 0;
+		padding: 0;
+		padding-top: 6px;
+		width: 13%;
+		height: inherit;
+		float: right;
+		text-align: left;
+	}
+
+		.search_btn {
+			margin: auto 6px;
+			width: 35%;
+			height: 32px;
+			background-color: white;
+			border: 1px solid black;
+			border-radius: 50%;
+		}
+
+		.search_btn:hover {
+			background-color: #f5f5f5;
+			border-color: inherit;
+		}
+
+/* container for condition block */
+
+
+/* search.php +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.searchbar_container {
+	margin: 0;
+	text-align: center;
+}
+
+.searchbar {
+	width: 80%;
+}
+
+#search_btn {
+	margin: 0;
+	padding: 2px 0 0 0;
+}
+
+/* submit_record.php +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+#user_submit_info_container {
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+#moderator_journal_container {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+	#submit_journal_left_container {
+		margin: 0;
+		padding: 5px;
+		width: 30%;
+		float: left;
+		background-color: rgb(200,200,200);
+	}
+
+		.namebar {
+			margin-top: 50px;
+			width: 60%;
+			padding: 0;
+		}
+
+		.emailbar {
+			margin-top: 10px;
+			width: 60%;
+			padding: 0;
+		}
+
+		.submit_label {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			text-align: left;
+		}
+
+		.submit_input {
+			margin: 0 0 10px 0;
+			padding: 0;
+			width: 100%;
+		}
+
+	#submit_journal_right_container {
+		margin: 0;
+		padding: 5px;
+		width: 70%;
+		float: left;
+		background-color: rgb(100,100,100);
+	}
+
+		#submit_journal_label {
+			text-align: center;
+		}
+
+#newarticle_btn {
+	width: 120px;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+#search_btn {
+	padding-right: 2px;
+}
+
+/* moderator.php ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+#moderator_journal_container {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+	#moderator_journal_left_container {
+		margin: 0;
+		padding: 5px;
+		width: 30%;
+		float: left;
+		background-color: rgb(200,200,200);
+	}
+
+		#moderator_journal_info_container {
+			margin: 0;
+			padding: 0;
+		}
+
+			.moderator_label {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				text-align: left;
+			}
+
+			.moderator_input {
+				margin: 0 0 10px 0;
+				padding: 0;
+				width: 100%;
+			}
+
+	#moderator_journal_right_container {
+		margin: 0;
+		padding: 5px;
+		width: 70%;
+		float: right;
+		background-color: rgb(100,100,100);
+	}
+
+		#moderator_journal_label {
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+
+		#moderator_input_journal {
+			text-align: center;
+		}
+
+/* analyst.php ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+#analyst_journal_table_container {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+
+	#analyst_journal_container {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		display: table-row;
+	}
+
+		#analyst_journal_left_container {
+			margin: 0;
+			padding: 5px;
+			width: 30%;
+			display: table-cell;
+			float: left;
+			text-align: center;
+			background-color: rgb(200,200,200);
+		}
+
+			#analyst_journal_info_container {
+				margin: 0 auto;
+				padding: 0;
+				width: 100%;
+				text-align: left;
+			}
+
+				.analyst_label {
+					margin: 0;
+					padding: 0;
+					text-align: left;
+				}
+
+				.analyst_input {
+					margin: 0 0 10px 0;
+					padding: 0;
+					width: 100%;
+				}
+
+		#analyst_journal_right_container {
+			margin: 0;
+			padding: 5px;
+			width: 70%;
+			height: 100%;
+			display: table-cell;
+			float: right;
+			background-color: rgb(100,100,100);
+		}
+
+			#analyst_journal_label {
+				margin: 0;
+				padding: 0;
+				text-align: center;
+			}
+
+			#analyst_input_journal {
+				text-align: center;
+			}
+
+/* user_account.php ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.container_account {
+	margin: 0 150px;
+	padding: 0 20px;
+	text-align: left;
+}
+
+#articles_submitted_label {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+#articles_submitted {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	margin-bottom: 20px;
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+  }
+
+  th, td {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+  }
+
+  tr:nth-child(even) {
+	background-color: #dddddd;
+  }
+
+/* admin.php styles: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+#user_search_container {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	background-color: gray;
+}
+
+	#user_search_input_container {
+		margin: 0;
+		padding: 5px 5px 0 0;
+		width: 50%;
+		height: 50px;
+		float: left;
+		text-align: center;
+	}
+
+		#user_input_label {
+			margin-right: 15px;
+			padding: 0;
+			width: 15%;
+			float: center;
+			text-align: center;
+			line-height: none!important;
+			margin-top: 7.5px;
+			margin-bottom: 7.5px;
+		}
+
+		#user_search {
+			margin: 0;
+			width: 60%;
+			float: center;
+		}
+
+	#user_role_select_container {
+		margin: auto 0;
+		padding: 5px 5px 0 0;
+		width: 50%;
+		height: 50px;
+		float: right;
+		text-align: left;
+	}
+
+			#user_role_label {
+				margin: 7px 0 0 0;
+				padding: 0;
+				width: 40%;
+				float: left;
+				text-align: center;
+			}
+
+			#select_user_role {
+				margin: 10px 0 0 0;
+				padding: 0;
+				width: 40%;
+				float: left;
+			}
+
+	#admin_search_btn {
+		margin: 0;
+		padding: 0;
+		float: right;
+	}
+
+/* about.html styles: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+h7 {
+	font-size:30px;
+	color: #444444;
+	background: #FFFFFF;
+	text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE,
+				 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE,
+				 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE,
+				 7px 6px 1px #CCCCCC;
+	color: #444444;
+	background: #FFFFFF;
+	}
