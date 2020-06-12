@@ -67,6 +67,7 @@
                         </select>
                     </div>
                     <br>
+                    <br>
                     <button id="analyst_button">Update Role</button>
                     <button id="analyst_button">Delete User</button>
                     <br>

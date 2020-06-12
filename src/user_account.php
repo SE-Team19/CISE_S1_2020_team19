@@ -51,16 +51,16 @@
             <br>
 
             <div id="login_div">  
-                <form id="login_form">
+                <form id="login_form" action="searchform.html" novalidate>
                     <div>
                         <label>Username:</label>
-                        <input class="searchbar" id="login_input" type="text" name="user_name" placeholder="guest">
+                        <input class="searchbar" id="login_input" type="text" name="user_name" value="guest">
                     </div>
                     <div>
                         <label>Password:&nbsp;</label>
-                        <input class="searchbar" id="login_input" type="text" name="password" placeholder="guest">
+                        <input class="searchbar" id="login_input" type="text" name="password" value="guest">
                     </div>
-                    <button id="analyst_button" onclick="window.location.href='searchform.html'">Login</button>
+                    <button id="login_button" type="submit">Login</button>
                 </form>   
             </div>
         </div>    
