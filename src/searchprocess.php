@@ -45,7 +45,7 @@
         </header>
 
         <div class="seer_title_container">
-            <h1 class="seer_home">SEER</h1>
+        <h1 class="seer_home" style="text-align: center;" onclick="window.location.href='searchform.html'">SEER</h1>
         </div>
 
         <div class="container">
