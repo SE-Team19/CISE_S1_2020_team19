@@ -66,7 +66,12 @@ function get($status) {
     $result = pg_query($sql); // Query the databse
     $output = pg_fetch_assoc($result); // Return as associative array
     
-    echo json_encode($output);
+    if (pg_num_rows($result) > 0) {
+        echo json_encode($output);
+    } else {
+        echo "";
+    }
+    
     return $output;
 }
 ?>
