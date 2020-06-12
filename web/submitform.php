@@ -46,27 +46,28 @@
             <!-- submitprocess.php -->
             <?php if (!empty($_POST)): ?>
                 <h3 class="hr_title"> Submit Article</h3>
+                <!-- send confirmation email -->
+                <?php 
+                    $to=$_POST["email"];
+                    $subj="SEER: Submission Received";
+                    $name=$_POST["name"];
+                    $headers="dtm0650@autuni.ac.nz";
+                    $msg="Hey, " . $name . ",/n/nWe received your submission and will notify you when it has been accepted or rejected./n/nRegards,/n/nThe SEER Team";
+                    mail($to,$subj,$msg,"From: $headers");
+                ?>
                 <hr>
                 <br>
                 Thank you, <?php echo htmlspecialchars($_POST["name"]); ?>!
                 <br>
                 <br>
                 <!-- connect to db > save article (to moderator queue(table)) > if successful > show article + email confirmation -->
-                Your submission has been received and is now in Stage 2.
-                <br>
-                <br>
-                <br>
-                <!-- image of steps (s1: submit > s2: moderation > posted to SEER) -->
-                Stage 1: Submit ---> Stage 2: Moderation ---> Stage 3: Posted to SEER
-                <br>
-                <br>
-                <br>
-                A confirmation email has been sent to <?php echo htmlspecialchars($_POST["email"]); ?>.
+                Your submission has been received and a confirmation email has been sent to <?php echo htmlspecialchars($_POST["email"]); ?>.
                 <br>
                 <br>
                 <input class="button" id="home_btn" type="button" value="Seach" onclick="window.location.href='searchform.php'">
                 <input class="button" id="newarticle_btn" type="button" value="New Article" onclick="window.location.href='submitform.php'">
                 <input class="button" id="search_btn" type="button" value="Search" onclick="window.location.href='submitprocess.php'">
+
             <?php else: ?>   
                 <!-- Submitter details (initial page) -->
                 <h3 class="hr_title"> New Article</h3>
@@ -114,6 +115,7 @@
                     <br>
                 </div>
                 </form>
+                
             <?php endif; ?>
         </div>
         <footer class="footer">
